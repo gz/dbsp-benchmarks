@@ -1,0 +1,10 @@
+.sass-cache/
+_site
+target
+lib
+kernel
+.vscode
+Cargo.lock
+*.md
+SMP_NOTES
+*.pyc

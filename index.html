@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Benchmarks 2x Skylake</h1>
+
+  <h2 class="page-heading">Nexmark CI Graphs</h2>
+  <div id="nexmark-skylake2x-ci"></div>
+  <script type="text/javascript">
+    var spec = "{{ 'redis/skylake2x/nexmark_ci_graph.json' | prepend: site.baseurl }}";
+    vegaEmbed('#nexmark-skylake2x-ci', spec).then(function (result) {
+    }).catch(console.error);
+  </script>
+
+</div>
