@@ -1,1 +1,2 @@
 date,revision,branch,commit_msg
+"2022-10-28T11:49:02-07:00","2e746ac5037e90e98634e25de239cfb23c67779f","unset","Fix clippy, false positive on unused dep."
