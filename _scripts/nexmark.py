@@ -1,6 +1,15 @@
-from utils import DATA_PATH, NEXMARK_BENCHMARKS, parse_git_info
+from utils import DATA_PATH, NEXMARK_BENCHMARKS
 import altair as alt
 import pandas as pd
+
+
+def load_nexmark_result(machine, revision, args):
+    results_csv_path = NEXMARK_BENCHMARKS / machine['name'] / \
+        revision / 'nexmark_results.csv.gz'
+    if results_csv_path.exists():
+        return pd.read_csv(results_csv_path)
+    else:
+        return None
 
 
 def load_nexmark_results(machine, args):
@@ -10,22 +19,12 @@ def load_nexmark_results(machine, args):
     if ci_result_file.exists():
         df = pd.read_csv(ci_result_file)
         for _idx, row in df.iterrows():
-            results_csv_path = NEXMARK_BENCHMARKS / machine['name'] / \
-                row['revision'] / 'nexmark_results.csv.gz'
-            if results_csv_path.exists():
-                nexmark_df = pd.read_csv(results_csv_path)
-                print(nexmark_df)
-
-                res = parse_git_info(row['revision'], args.repo)
-                if res != None:
-                    branches, commit_msg, commit_date = res
-                    nexmark_df['branches'] = branches
-                    nexmark_df['date'] = commit_date
-                    nexmark_df['commit_msg'] = commit_msg
-                    results.append(nexmark_df)
-                    print(results)
-                else:
-                    print("Can't determine commit info, skipping.")
+            nexmark_df = load_nexmark_result(machine, row['revision'], args)
+            if nexmark_df:
+                results.append(nexmark_df)
+                print(results)
+            else:
+                print("Can't determine commit info, skipping {}.".format(row['revision']))
         try:
             nexmark_all = pd.concat(results).sort_values('date')
             nexmark_all['date'] = pd.to_datetime(
