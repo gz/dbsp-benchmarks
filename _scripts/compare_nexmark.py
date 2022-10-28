@@ -6,11 +6,9 @@
 from nexmark import load_nexmark_result
 from utils import MACHINES, DATA_PATH
 from ci_history import parse_csv
-from plumbum.cmd import git, head
+from plumbum.cmd import git
 import argparse
-import subprocess
-import os
-import sys
+import pandas as pd
 
 
 def get_parser():
@@ -33,22 +31,34 @@ if __name__ == '__main__':
 
     machine_results = parse_csv(machine)
     git_rev_current = git['rev-parse', 'HEAD']
-    git_rev_current = '2e746ac5037e90e98634e25de239cfb23c67779f'
+    git_rev_current = '48b3f76580532c6444080764f5145409ddbee03b'
     if not git_rev_current in machine_results:
         exit("Revision should exist because we just added it.")
 
     for i in range(0, 10):
         git_rev_main = git['rev-parse', 'origin/main~{}'.format(i)]
-        git_rev_main = '2e746ac5037e90e98634e25de239cfb23c67779f'
+        git_rev_main = '48b3f76580532c6444080764f5145409ddbee03b'
 
         if git_rev_main in machine_results:
             main_results = load_nexmark_result(machine, git_rev_main, args)
             current_results = load_nexmark_result(machine, git_rev_current, args)
+            print(main_results['name'])
+            print(current_results['name'])
+
+            df_compare = main_results.join(current_results, on='name', lsuffix='_main', rsuffix='_current')
+
+            print(df_compare)
+            """
+            for benchmark in main_results.rows():
+                print(benchmark)
+                if benchmark not in current_results:
+                    continue
+                print("Benchmark: {}".format(benchmark['name']))
+                #print("Main: {}".format(main_results[benchmark]))
+                #print("Current: {}".format(current_results[benchmark]))
+                #print("")
+
 
             print("Comparing {} to {}".format(main_results, current_results))
             break
-
-
-
-
-
+            """
