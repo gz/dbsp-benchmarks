@@ -11,7 +11,7 @@ NEXMARK_BENCHMARKS = (SCRIPT_PATH / '..').resolve() / 'nexmark'
 DATA_PATH = (SCRIPT_PATH / '..').resolve() / '_data'
 
 MACHINES = [
-    {'name': 'skylake2x', 'cores': 28, 'threads': 56},
+    {'name': 'skylake-2x', 'cores': 28, 'threads': 56},
 ]
 
 
