@@ -30,7 +30,6 @@ if __name__ == '__main__':
 
     machine_results = parse_csv(machine)
     git_rev_current = git['rev-parse', 'HEAD']().strip()
-    git_rev_current = '37276d31f3e973d3620aef70e1f4cad580c28d54'
     if not git_rev_current in machine_results:
         exit("Revision {} should exist because we just added it.".format(git_rev_current))
 
