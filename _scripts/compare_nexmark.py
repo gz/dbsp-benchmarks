@@ -27,38 +27,52 @@ if __name__ == '__main__':
 
     if len(args.machines) == 1:
         machine = next(m for m in MACHINES if m['name'] == args.machines[0])
-        print (parse_csv(machine))
 
     machine_results = parse_csv(machine)
     git_rev_current = git['rev-parse', 'HEAD']
-    git_rev_current = '48b3f76580532c6444080764f5145409ddbee03b'
     if not git_rev_current in machine_results:
         exit("Revision should exist because we just added it.")
 
     for i in range(0, 10):
         git_rev_main = git['rev-parse', 'origin/main~{}'.format(i)]
+        # TODO: remove once we have some commits in main...
         git_rev_main = '48b3f76580532c6444080764f5145409ddbee03b'
 
         if git_rev_main in machine_results:
             main_results = load_nexmark_result(machine, git_rev_main, args)
+            main_results = main_results.set_index('name')
             current_results = load_nexmark_result(machine, git_rev_current, args)
-            print(main_results['name'])
-            print(current_results['name'])
+            current_results = current_results.set_index('name')
 
-            df_compare = main_results.join(current_results, on='name', lsuffix='_main', rsuffix='_current')
+            main_results['tput'] = main_results['num_events'] / main_results['elapsed']
+            current_results['tput'] = current_results['num_events']+100 / current_results['elapsed']
 
-            print(df_compare)
-            """
-            for benchmark in main_results.rows():
-                print(benchmark)
-                if benchmark not in current_results:
-                    continue
-                print("Benchmark: {}".format(benchmark['name']))
-                #print("Main: {}".format(main_results[benchmark]))
-                #print("Current: {}".format(current_results[benchmark]))
-                #print("")
+            MEASUREMENT_ERROR = 5 # percent
+            SERIOUS_DEGRADATION = 25 # percent
+            def tput_fmt(tput):
+                pictogram = ":heavy_check_mark:"
+                if tput > 100 + MEASUREMENT_ERROR:
+                    pictogram = ":evergreen_tree:"
+                if tput < 100 - MEASUREMENT_ERROR:
+                    pictogram = ":small_red_triangle_down:"
+                if tput < 100 - SERIOUS_DEGRADATION:
+                    pictogram = ":interrobang:"
 
+                return pictogram
 
-            print("Comparing {} to {}".format(main_results, current_results))
+            df_compare = pd.DataFrame()
+            if i == 0:
+                df_compare['main [Op/s]'] = main_results['tput']
+            else:
+                df_compare['main~{} [Op/s]'.format(i)] = main_results['tput']
+            df_compare['PR [Op/s]'] = current_results['tput']
+            df_compare['Throughput relative to main [%]'] = (current_results['tput'] / main_results['tput']) * 100
+            df_compare['Assessment'] = df_compare['Throughput relative to main [%]'].map(tput_fmt)
+            regressed_queries = df_compare['Throughput relative to main [%]'] < (100 - MEASUREMENT_ERROR)
+
+            print("Nexmark benchmark: {} out of {} queries have regressed.".format(regressed_queries.sum(), len(df_compare)))
+            if i > 0:
+                print("No benchmark results found for current main revision, compared against {}".format(git_rev_main))
+            print()
+            print(df_compare.to_markdown())
             break
-            """
