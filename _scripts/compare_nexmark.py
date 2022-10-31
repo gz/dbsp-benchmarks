@@ -29,14 +29,14 @@ if __name__ == '__main__':
         machine = next(m for m in MACHINES if m['name'] == args.machines[0])
 
     machine_results = parse_csv(machine)
-    git_rev_current = git['rev-parse', 'HEAD']
+    git_rev_current = git['rev-parse', 'HEAD']().strip()
     if not git_rev_current in machine_results:
-        exit("Revision should exist because we just added it.")
+        exit("Revision {} should exist because we just added it.".format(git_rev_current))
 
     for i in range(0, 10):
-        git_rev_main = git['rev-parse', 'origin/main~{}'.format(i)]
+        git_rev_main = git['rev-parse', 'origin/main~{}'.format(i)]().strip()
         # TODO: remove once we have some commits in main...
-        git_rev_main = '48b3f76580532c6444080764f5145409ddbee03b'
+        git_rev_main = 'c332ad9170b1f3a3863622631c637d707285d5b6'
 
         if git_rev_main in machine_results:
             main_results = load_nexmark_result(machine, git_rev_main, args)
@@ -70,7 +70,10 @@ if __name__ == '__main__':
             df_compare['Assessment'] = df_compare['Throughput relative to main [%]'].map(tput_fmt)
             regressed_queries = df_compare['Throughput relative to main [%]'] < (100 - MEASUREMENT_ERROR)
 
-            print("Nexmark benchmark: {} out of {} queries have regressed.".format(regressed_queries.sum(), len(df_compare)))
+            # The 'Nexmark benchmark results' substring is used to find the
+            # comment (if it exists), if you change it you need to adjust the
+            # github action too.
+            print("Nexmark benchmark results: {} out of {} queries have regressed.".format(regressed_queries.sum(), len(df_compare)))
             if i > 0:
                 print("No benchmark results found for current main revision, compared against {}".format(git_rev_main))
             print()
