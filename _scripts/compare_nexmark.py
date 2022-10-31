@@ -60,6 +60,10 @@ if __name__ == '__main__':
 
                 return pictogram
 
+            def format_percentage(p):
+                p = round(p)
+                return p - 100
+
             df_compare = pd.DataFrame()
             if i == 0:
                 df_compare['main [Op/s]'] = main_results['tput']
@@ -67,9 +71,9 @@ if __name__ == '__main__':
                 df_compare['main~{} [Op/s]'.format(i)] = main_results['tput']
             df_compare['PR [Op/s]'] = current_results['tput']
             df_compare['Throughput relative to main [%]'] = (current_results['tput'] / main_results['tput']) * 100
-            df_compare['Throughput relative to main [%]'] = df_compare['Throughput relative to main [%]'].map(lambda x: round(x))
             df_compare['Assessment'] = df_compare['Throughput relative to main [%]'].map(tput_fmt)
             regressed_queries = df_compare['Throughput relative to main [%]'] < (100 - MEASUREMENT_ERROR)
+            df_compare['Throughput relative to main [%]'] = df_compare['Throughput relative to main [%]'].map(format_percentage)
 
             # The 'Nexmark benchmark results' substring is used to find the
             # comment (if it exists), if you change it you need to adjust the
