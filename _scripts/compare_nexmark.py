@@ -45,7 +45,7 @@ if __name__ == '__main__':
             current_results = current_results.set_index('name')
 
             main_results['tput'] = main_results['num_events'] / main_results['elapsed']
-            current_results['tput'] = current_results['num_events']+100 / current_results['elapsed']
+            current_results['tput'] = current_results['num_events'] / current_results['elapsed']
 
             MEASUREMENT_ERROR = 5 # percent
             SERIOUS_DEGRADATION = 25 # percent
@@ -74,6 +74,8 @@ if __name__ == '__main__':
             # comment (if it exists), if you change it you need to adjust the
             # github action too.
             print("Nexmark benchmark results: {} out of {} queries have regressed.".format(regressed_queries.sum(), len(df_compare)))
+            print()
+            print("Compared {} against {}".format(git_rev_main[0:7], git_rev_current[0:7]))
             if i > 0:
                 print("No benchmark results found for current main revision, compared against {}".format(git_rev_main))
             print()
