@@ -4,3 +4,4 @@ date,revision,branch,commit_msg
 "2022-10-31T14:32:46-07:00","37276d31f3e973d3620aef70e1f4cad580c28d54","refs/heads/autobenchmark","Update runner installation instructions."
 "2022-10-31T15:06:06-07:00","d36f592c8671374be7f7a5b534bbebdd5b1e852b","refs/heads/autobenchmark","Find the right PR if it exists on push and pull request events."
 "2022-10-31T15:17:27-07:00","2857e986ebbb69f2e30e89eac2b286a6dd04c8f5","refs/heads/autobenchmark","Also use right PR id in comment creation."
+"2022-10-31T16:25:38-07:00","eda64972753635d4397ba3e6acabd508da120cfd","refs/heads/autobenchmark","Rename bench.yml file."
