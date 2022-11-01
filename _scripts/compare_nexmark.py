@@ -24,13 +24,10 @@ def get_parser():
 
 def get_main_ref(i):
     git_rev_main = git['rev-parse', 'origin/main~{}'.format(i)]().strip()
-    # TODO: remove once we have some commits in main...
-    git_rev_main = 'fde6424368ab1a3505a2900771d0ba43130e0b5e'
     return git_rev_main
 
 def get_ref_current():
     git_rev_current = git['rev-parse', 'HEAD']().strip()
-    #git_rev_current = '37276d31f3e973d3620aef70e1f4cad580c28d54'
     if not git_rev_current in machine_results:
         exit("Revision {} should exist because we just added it.".format(git_rev_current))
     return git_rev_current
