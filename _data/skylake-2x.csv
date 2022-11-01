@@ -18,3 +18,4 @@ date,revision,branch,commit_msg
 "2022-11-01T06:07:30+00:00","a57a302d444e6d49761ea9da40b5f0d9baa423f2","refs/pull/223/merge","Merge fa69b6128177868f93e3fc746e9300de2c663a8c into 37f43652e1eed1d6b14a9e3a7d6766f853c89670"
 "2022-10-31T23:19:18-07:00","c26c15316ee6bebd4ea594266d7d2bb5788bc707","refs/heads/fast-forward","Skip duplicate jobs in CI."
 "2022-11-01T06:19:46+00:00","cc588028968b4ed299b68ae160033418b4b5b3d4","refs/pull/223/merge","Merge c26c15316ee6bebd4ea594266d7d2bb5788bc707 into 37f43652e1eed1d6b14a9e3a7d6766f853c89670"
+"2022-10-31T23:20:28-07:00","82e04b3a9a8d30b865c0d57ed3b27748aa189e52","refs/heads/fast-forward","A bit more concurrency for sanitizers."
