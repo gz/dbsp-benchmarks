@@ -1,1 +1,1 @@
-__all__ = ["utils", "nexmark", "ci_history", "compare"]
+__all__ = ["utils", "nexmark", "ci_history", "compare", 'galen']

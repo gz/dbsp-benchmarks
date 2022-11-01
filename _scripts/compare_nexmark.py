@@ -4,6 +4,7 @@
 # Should be executed in the root directory of the dbsp (code) repository.
 
 from nexmark import load_nexmark_result
+from galen import load_galen_result
 from utils import MACHINES, DATA_PATH
 from ci_history import parse_csv
 from plumbum.cmd import git
@@ -21,23 +22,43 @@ def get_parser():
                         help="Only regenerate results for specific machine type.")
     return parser
 
+def get_main_ref(i):
+    git_rev_main = git['rev-parse', 'origin/main~{}'.format(i)]().strip()
+    # TODO: remove once we have some commits in main...
+    git_rev_main = 'fde6424368ab1a3505a2900771d0ba43130e0b5e'
+    return git_rev_main
 
-if __name__ == '__main__':
-    args = get_parser().parse_args()
-
-    if len(args.machines) == 1:
-        machine = next(m for m in MACHINES if m['name'] == args.machines[0])
-
-    machine_results = parse_csv(machine)
+def get_ref_current():
     git_rev_current = git['rev-parse', 'HEAD']().strip()
     #git_rev_current = '37276d31f3e973d3620aef70e1f4cad580c28d54'
     if not git_rev_current in machine_results:
         exit("Revision {} should exist because we just added it.".format(git_rev_current))
+    return git_rev_current
+
+
+MEASUREMENT_ERROR = 5 # percent
+SERIOUS_DEGRADATION = 25 # percent
+
+def percentage_to_icon(tput):
+    pictogram = ":heavy_check_mark:"
+    if tput > 100 + MEASUREMENT_ERROR:
+        pictogram = ":evergreen_tree:"
+    if tput < 100 - MEASUREMENT_ERROR:
+        pictogram = ":small_red_triangle_down:"
+    if tput < 100 - SERIOUS_DEGRADATION:
+        pictogram = ":interrobang:"
+
+    return pictogram
+
+def format_percentage(p):
+    p = round(p)
+    return p - 100
+
+def compare_nexmark(args):
+    git_rev_current = get_ref_current()
 
     for i in range(0, 10):
-        git_rev_main = git['rev-parse', 'origin/main~{}'.format(i)]().strip()
-        # TODO: remove once we have some commits in main...
-        git_rev_main = 'eda64972753635d4397ba3e6acabd508da120cfd'
+        git_rev_main = get_main_ref(i)
 
         if git_rev_main in machine_results:
             main_results = load_nexmark_result(machine, git_rev_main, args)
@@ -48,23 +69,6 @@ if __name__ == '__main__':
             main_results['tput'] = main_results['num_events'] / main_results['elapsed']
             current_results['tput'] = current_results['num_events'] / current_results['elapsed']
 
-            MEASUREMENT_ERROR = 5 # percent
-            SERIOUS_DEGRADATION = 25 # percent
-            def tput_fmt(tput):
-                pictogram = ":heavy_check_mark:"
-                if tput > 100 + MEASUREMENT_ERROR:
-                    pictogram = ":evergreen_tree:"
-                if tput < 100 - MEASUREMENT_ERROR:
-                    pictogram = ":small_red_triangle_down:"
-                if tput < 100 - SERIOUS_DEGRADATION:
-                    pictogram = ":interrobang:"
-
-                return pictogram
-
-            def format_percentage(p):
-                p = round(p)
-                return p - 100
-
             df_compare = pd.DataFrame()
             if i == 0:
                 df_compare['main [Op/s]'] = main_results['tput']
@@ -72,17 +76,14 @@ if __name__ == '__main__':
                 df_compare['main~{} [Op/s]'.format(i)] = main_results['tput']
             df_compare['PR [Op/s]'] = current_results['tput']
             df_compare['Tput change [%]'] = (current_results['tput'] / main_results['tput']) * 100
-            df_compare['Assessment'] = df_compare['Tput change [%]'].map(tput_fmt)
+            df_compare['Assessment'] = df_compare['Tput change [%]'].map(percentage_to_icon)
             regressed_queries = df_compare['Tput change [%]'] < (100 - MEASUREMENT_ERROR)
             df_compare['Tput change [%]'] = df_compare['Tput change [%]'].map(format_percentage)
 
             df_compare['Peak RSS diff'] = current_results['allocstats_after_peak_rss'] - main_results['allocstats_after_peak_rss']
             df_compare['Peak RSS diff'] = df_compare['Peak RSS diff'].map(naturalsize)
 
-            # The 'Benchmark results' substring is used to find the comment (if
-            # it exists), if you change it you need to adjust the github action
-            # in `bench.yml`.
-            print("## Benchmark results")
+            print()
             print("### Nexmark")
             print()
             if regressed_queries.sum() > 0:
@@ -93,3 +94,56 @@ if __name__ == '__main__':
             print()
             print(df_compare.to_markdown())
             break
+
+def compare_galen(args):
+    git_rev_current = get_ref_current()
+
+    for i in range(0, 10):
+        git_rev_main = get_main_ref(i)
+
+        if git_rev_main in machine_results:
+            main_results = load_galen_result(machine, git_rev_main, args)
+            main_results = main_results.set_index('name')
+            current_results = load_galen_result(machine, git_rev_current, args)
+            current_results = current_results.set_index('name')
+
+            df_compare = pd.DataFrame()
+            if i == 0:
+                df_compare['main [s]'] = main_results['elapsed']
+            else:
+                df_compare['main~{} [s]'.format(i)] = main_results['elapsed']
+            df_compare['PR [s]'] = current_results['elapsed']
+
+            df_compare['Runtime change [%]'] = (current_results['elapsed'] / main_results['elapsed']) * 100
+            df_compare['Assessment'] = df_compare['Runtime change [%]'].map(percentage_to_icon)
+            regressed_queries = df_compare['Runtime change [%]'] < (100 - MEASUREMENT_ERROR)
+            df_compare['Runtime change [%]'] = df_compare['Runtime change [%]'].map(format_percentage)
+
+            print()
+            print("### Galen")
+            print()
+            if regressed_queries.sum() > 0:
+                print("* {} out of {} benchmarks have regressed :exclamation:".format(regressed_queries.sum(), len(df_compare)))
+            print("* Compared results from {} (main) with {} (PR)".format(git_rev_main[0:7], git_rev_current[0:7]))
+            if i > 0:
+                print("No benchmark results found for current main revision, compared against {}".format(git_rev_main))
+            print()
+            print(df_compare.to_markdown())
+            break
+
+
+if __name__ == '__main__':
+    args = get_parser().parse_args()
+
+    if len(args.machines) == 1:
+        machine = next(m for m in MACHINES if m['name'] == args.machines[0])
+
+    machine_results = parse_csv(machine)
+
+    # The 'Benchmark results' substring is used to find the comment (if
+    # it exists), if you change it you need to adjust the github action
+    # in `bench.yml`.
+    print("## Benchmark results")
+
+    compare_nexmark(args)
+    compare_galen(args)
