@@ -7,9 +7,9 @@ from nexmark import load_nexmark_result
 from utils import MACHINES, DATA_PATH
 from ci_history import parse_csv
 from plumbum.cmd import git
+from humanize import naturalsize
 import argparse
 import pandas as pd
-
 
 def get_parser():
     "Construct argument parser"
@@ -30,13 +30,14 @@ if __name__ == '__main__':
 
     machine_results = parse_csv(machine)
     git_rev_current = git['rev-parse', 'HEAD']().strip()
+    #git_rev_current = '37276d31f3e973d3620aef70e1f4cad580c28d54'
     if not git_rev_current in machine_results:
         exit("Revision {} should exist because we just added it.".format(git_rev_current))
 
     for i in range(0, 10):
         git_rev_main = git['rev-parse', 'origin/main~{}'.format(i)]().strip()
         # TODO: remove once we have some commits in main...
-        git_rev_main = 'c332ad9170b1f3a3863622631c637d707285d5b6'
+        git_rev_main = 'eda64972753635d4397ba3e6acabd508da120cfd'
 
         if git_rev_main in machine_results:
             main_results = load_nexmark_result(machine, git_rev_main, args)
@@ -74,6 +75,9 @@ if __name__ == '__main__':
             df_compare['Assessment'] = df_compare['Throughput relative to main [%]'].map(tput_fmt)
             regressed_queries = df_compare['Throughput relative to main [%]'] < (100 - MEASUREMENT_ERROR)
             df_compare['Throughput relative to main [%]'] = df_compare['Throughput relative to main [%]'].map(format_percentage)
+
+            df_compare['Peak RSS diff'] = current_results['allocstats_after_peak_rss'] - main_results['allocstats_after_peak_rss']
+            df_compare['Peak RSS diff'] = df_compare['Peak RSS diff'].map(naturalsize)
 
             # The 'Nexmark benchmark results' substring is used to find the
             # comment (if it exists), if you change it you need to adjust the

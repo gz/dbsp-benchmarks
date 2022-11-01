@@ -7,3 +7,4 @@ plumbum
 altair
 argparse
 tabulate
+humanize
