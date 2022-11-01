@@ -71,21 +71,22 @@ if __name__ == '__main__':
             else:
                 df_compare['main~{} [Op/s]'.format(i)] = main_results['tput']
             df_compare['PR [Op/s]'] = current_results['tput']
-            df_compare['Throughput relative to main [%]'] = (current_results['tput'] / main_results['tput']) * 100
-            df_compare['Assessment'] = df_compare['Throughput relative to main [%]'].map(tput_fmt)
-            regressed_queries = df_compare['Throughput relative to main [%]'] < (100 - MEASUREMENT_ERROR)
-            df_compare['Throughput relative to main [%]'] = df_compare['Throughput relative to main [%]'].map(format_percentage)
+            df_compare['Tput change [%]'] = (current_results['tput'] / main_results['tput']) * 100
+            df_compare['Assessment'] = df_compare['Tput change [%]'].map(tput_fmt)
+            regressed_queries = df_compare['Tput change [%]'] < (100 - MEASUREMENT_ERROR)
+            df_compare['Tput change [%]'] = df_compare['Tput change [%]'].map(format_percentage)
 
             df_compare['Peak RSS diff'] = current_results['allocstats_after_peak_rss'] - main_results['allocstats_after_peak_rss']
             df_compare['Peak RSS diff'] = df_compare['Peak RSS diff'].map(naturalsize)
 
+            # The 'Benchmark results' substring is used to find the comment (if
+            # it exists), if you change it you need to adjust the github action
+            # in `bench.yml`.
             print("## Benchmark results")
             print("### Nexmark")
             print()
-            # The 'Nexmark benchmark results' substring is used to find the
-            # comment (if it exists), if you change it you need to adjust the
-            # github action too.
-            print("* Nexmark benchmark results: {} out of {} queries have regressed.".format(regressed_queries.sum(), len(df_compare)))
+            if regressed_queries.sum() > 0:
+                print("* {} out of {} queries have regressed :exclamation:".format(regressed_queries.sum(), len(df_compare)))
             print("* Compared results from {} (main) with {} (PR)".format(git_rev_main[0:7], git_rev_current[0:7]))
             if i > 0:
                 print("No benchmark results found for current main revision, compared against {}".format(git_rev_main))
