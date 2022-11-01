@@ -79,12 +79,14 @@ if __name__ == '__main__':
             df_compare['Peak RSS diff'] = current_results['allocstats_after_peak_rss'] - main_results['allocstats_after_peak_rss']
             df_compare['Peak RSS diff'] = df_compare['Peak RSS diff'].map(naturalsize)
 
+            print("## Benchmark results")
+            print("### Nexmark")
+            print()
             # The 'Nexmark benchmark results' substring is used to find the
             # comment (if it exists), if you change it you need to adjust the
             # github action too.
-            print("Nexmark benchmark results: {} out of {} queries have regressed.".format(regressed_queries.sum(), len(df_compare)))
-            print()
-            print("Compared {} against {}".format(git_rev_main[0:7], git_rev_current[0:7]))
+            print("* Nexmark benchmark results: {} out of {} queries have regressed.".format(regressed_queries.sum(), len(df_compare)))
+            print("* Compared results from {} (main) with {} (PR)".format(git_rev_main[0:7], git_rev_current[0:7]))
             if i > 0:
                 print("No benchmark results found for current main revision, compared against {}".format(git_rev_main))
             print()
