@@ -29,3 +29,4 @@ date,revision,branch,commit_msg
 "2022-11-01T20:22:10-07:00","78994cba500aa85b280e45a15f12872114d3686a","refs/heads/ldbc-automate-bench","Also save memory stats."
 "2022-11-01T22:08:11-07:00","5d1744f76391eb931d2af261a2a97663713c50fa","refs/heads/ldbc-automate-bench","Use smaller graph for 6thread runs."
 "2022-11-02T10:43:51-07:00","c7ef69bf56d4d0d3913bfa4ad8d4e1fb907acac3","refs/heads/ldbc-automate-bench","Fix formatting."
+"2022-11-02T11:34:18-07:00","fbf2c8a54bf68978090a56051c09b9b444bc8ea7","refs/heads/ldbc-automate-bench","Pass csv file-name on command line invocation."
