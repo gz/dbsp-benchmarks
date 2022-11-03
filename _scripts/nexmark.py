@@ -15,9 +15,13 @@ def load_nexmark_results(machine, args):
         df = pd.read_csv(ci_result_file)
         for _idx, row in df.iterrows():
             nexmark_df = load_nexmark_result(machine, row['revision'], args)
-            if nexmark_df:
+            if nexmark_df is not None:
+                nexmark_df['branches'] = row['branch']
+                nexmark_df['date'] = row['date']
+                nexmark_df['commit_msg'] = row['commit_msg']
+                nexmark_df['git_rev'] = row['revision']
                 results.append(nexmark_df)
-                print(results)
+                #print(results)
             else:
                 print("Can't determine commit info, skipping {}.".format(
                     row['revision']))
@@ -34,56 +38,36 @@ def load_nexmark_results(machine, args):
 
 
 def nexmark_ci_graph(machine, args):
-    dataset = load_nexmark_results(machine, args)
     "Generates a CI graph for nexmark"
+    dataset = load_nexmark_results(machine, args)
     if dataset is None or dataset.empty:
         return None
     dataset.reset_index(inplace=True)
-
-    # Make chart for GET Tput
-    line = alt.Chart(dataset).mark_line(
-        size=3
-    ).transform_window(
-        rolling_mean='mean(get)',
-        frame=[-5, 5],
-        groupby=['driver']
-    ).encode(
-        x='date:T',
-        y='rolling_mean:Q',
-        color='driver',
-    )
-
-    points = alt.Chart(dataset).mark_point().encode(
-        x=alt.X('date:T', axis=alt.Axis(title='Commit Date')),
-        y=alt.Y('get_total:Q',
-                axis=alt.Axis(title='Throughput [Op/s]')),
-        tooltip=["commit_msg:N", "date:T", "branches:N", "git_rev:N"],
-        color='driver',
-    )
-    chartGet = (line + points).facet('cores:N', columns=3)
+    dataset['tput'] = (dataset['num_events'] / dataset['elapsed']) / 1000
+    dataset['name'] = dataset['name'].str.replace('q', '').astype(int)
 
     # Make chart for SET Tput
     line = alt.Chart(dataset).mark_line(
         size=3
     ).transform_window(
-        rolling_mean='mean(set)',
+        rolling_mean='mean(tput)',
         frame=[-5, 5],
-        groupby=['driver']
+        groupby=['name']
     ).encode(
         x='date:T',
         y='rolling_mean:Q',
-        color='driver'
     )
 
     points = alt.Chart(dataset).mark_point().encode(
         x=alt.X('date:T', axis=alt.Axis(title='Commit Date')),
-        y=alt.Y('set_total:Q',
-                axis=alt.Axis(title='SET Throughput [Op/s]')),
+        y=alt.Y('tput:Q',
+                axis=alt.Axis(title='Throughput [kOp/s]')),
         tooltip=["commit_msg:N", "date:T", "branches:N", "git_rev:N"],
-        color='driver',
     )
-    chartSet = (line + points).facet('cores:N', columns=3)
+    # sort not working atm: https://github.com/vega/vega-lite/issues/5366
+    # sort=['q0', 'q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8', 'q9', 'q12', 'q13', 'q14', 'q15', 'q16', 'q17', 'q18', 'q19', 'q20', 'q21', 'q22']
+    chartSet = (line + points).facet('name:N', columns=3)
 
-    chart = alt.vconcat(chartGet, chartSet)
+    chart = alt.vconcat(chartSet)
     chart.save(str(NEXMARK_BENCHMARKS / machine['name'] /
                    "nexmark_ci_graph.json"), format="json")
