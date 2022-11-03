@@ -15,7 +15,11 @@ def load_ldbc_results(machine, args):
         df = pd.read_csv(ci_result_file)
         for _idx, row in df.iterrows():
             ldbc_df = load_ldbc_result(machine, row['revision'], args)
-            if ldbc_df:
+            if ldbc_df is not None:
+                ldbc_df['branches'] = row['branch']
+                ldbc_df['date'] = row['date']
+                ldbc_df['commit_msg'] = row['commit_msg']
+                ldbc_df['git_rev'] = row['revision']
                 results.append(ldbc_df)
                 print(results)
             else:
@@ -39,51 +43,30 @@ def ldbc_ci_graph(machine, args):
     if dataset is None or dataset.empty:
         return None
     dataset.reset_index(inplace=True)
+    dataset['kEVPS'] = dataset['evps'] / 1000
 
     # Make chart for GET Tput
     line = alt.Chart(dataset).mark_line(
         size=3
     ).transform_window(
-        rolling_mean='mean(get)',
+        rolling_mean='mean(kEVPS)',
         frame=[-5, 5],
-        groupby=['driver']
+        groupby=['dataset']
     ).encode(
         x='date:T',
         y='rolling_mean:Q',
-        color='driver',
+        color='dataset:N'
     )
 
     points = alt.Chart(dataset).mark_point().encode(
         x=alt.X('date:T', axis=alt.Axis(title='Commit Date')),
-        y=alt.Y('get_total:Q',
-                axis=alt.Axis(title='Throughput [Op/s]')),
+        y=alt.Y('kEVPS:Q',
+                axis=alt.Axis(title='kEVPS')),
         tooltip=["commit_msg:N", "date:T", "branches:N", "git_rev:N"],
-        color='driver',
+        color='dataset:N',
     )
-    chartGet = (line + points).facet('cores:N', columns=3)
+    chartGet = (line + points).facet('algorithm:N', columns=3)
 
-    # Make chart for SET Tput
-    line = alt.Chart(dataset).mark_line(
-        size=3
-    ).transform_window(
-        rolling_mean='mean(set)',
-        frame=[-5, 5],
-        groupby=['driver']
-    ).encode(
-        x='date:T',
-        y='rolling_mean:Q',
-        color='driver'
-    )
-
-    points = alt.Chart(dataset).mark_point().encode(
-        x=alt.X('date:T', axis=alt.Axis(title='Commit Date')),
-        y=alt.Y('set_total:Q',
-                axis=alt.Axis(title='SET Throughput [Op/s]')),
-        tooltip=["commit_msg:N", "date:T", "branches:N", "git_rev:N"],
-        color='driver',
-    )
-    chartSet = (line + points).facet('cores:N', columns=3)
-
-    chart = alt.vconcat(chartGet, chartSet)
+    chart = alt.vconcat(chartGet)
     chart.save(str(LDBC_BENCHMARKS / machine['name'] /
                    "ldbc_ci_graph.json"), format="json")

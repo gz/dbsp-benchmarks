@@ -1,5 +1,7 @@
 import csv
 from nexmark import nexmark_ci_graph
+from galen import galen_ci_graph
+from ldbc import ldbc_ci_graph
 from utils import MACHINES, DATA_PATH
 import argparse
 import subprocess
@@ -47,7 +49,7 @@ def get_parser():
     # General build arguments
     parser.add_argument("-v", "--verbose", action="store_true",
                         help="increase output verbosity")
-    parser.add_argument("--benchmarks", type=str, nargs='+', default=['nexmark'],
+    parser.add_argument("--benchmarks", type=str, nargs='+', default=['nexmark', 'galen', 'ldbc'],
                         help="Which benchmarks to plot.")
     parser.add_argument("--machines", type=str, nargs='+', default=[n['name'] for n in MACHINES], choices=[n['name'] for n in MACHINES],
                         help="Only regenerate results for specific machine type.")
@@ -68,6 +70,10 @@ if __name__ == '__main__':
         append_csv(machine)
 
     for machine in args.machines:
-       machine = next(m for m in MACHINES if m['name'] == machine)
-       if 'nexmark' in args.benchmarks:
-           nexmark_ci_graph(machine, args)
+        machine = next(m for m in MACHINES if m['name'] == machine)
+        if 'nexmark' in args.benchmarks:
+            nexmark_ci_graph(machine, args)
+        if 'galen' in args.benchmarks:
+            galen_ci_graph(machine, args)
+        if 'ldbc' in args.benchmarks:
+            ldbc_ci_graph(machine, args)
