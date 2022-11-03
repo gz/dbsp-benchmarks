@@ -67,7 +67,7 @@ if __name__ == '__main__':
         machine = next(m for m in MACHINES if m['name'] == args.machines[0])
         append_csv(machine)
 
-    #for machine in args.machines:
+    # for machine in args.machines:
     #    machine = next(m for m in MACHINES if m['name'] == machine)
     #    if 'nexmark' in args.benchmarks:
     #        nexmark_ci_graph(machine, args)

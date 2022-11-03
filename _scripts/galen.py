@@ -1,15 +1,10 @@
-from utils import DATA_PATH, GALEN_BENCHMARKS
+from utils import DATA_PATH, GALEN_BENCHMARKS, load_results_generic
 import altair as alt
 import pandas as pd
 
 
 def load_galen_result(machine, revision, args):
-    results_csv_path = GALEN_BENCHMARKS / machine['name'] / \
-        revision / 'galen_results.csv.gz'
-    if results_csv_path.exists():
-        return pd.read_csv(results_csv_path)
-    else:
-        return None
+    return load_results_generic(GALEN_BENCHMARKS / machine['name'] / revision / 'galen_results.csv.gz')
 
 
 def load_galen_results(machine, args):
@@ -24,7 +19,8 @@ def load_galen_results(machine, args):
                 results.append(galen_df)
                 print(results)
             else:
-                print("Can't determine commit info, skipping {}.".format(row['revision']))
+                print("Can't determine commit info, skipping {}.".format(
+                    row['revision']))
         try:
             nexmark_all = pd.concat(results).sort_values('date')
             nexmark_all['date'] = pd.to_datetime(
