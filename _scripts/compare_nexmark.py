@@ -26,6 +26,7 @@ def get_parser():
 
 
 def get_main_ref(i):
+    git['fetch', 'origin', 'main']
     git_rev_main = git['rev-parse', 'origin/main~{}'.format(i)]().strip()
     return git_rev_main
 
