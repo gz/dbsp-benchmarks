@@ -26,3 +26,4 @@ date,revision,branch,commit_msg
 "2022-11-03T12:20:21-05:00","a89d14250f8385aaf11adc5a055044842c05ffb6","refs/pull/221/merge","Removed patch feature"
 "2022-11-03T12:26:46-05:00","445b6ca6aba1a1042c5956fcaf251058778dfc42","refs/pull/221/merge","Renamed straggelers"
 "2022-11-05T12:15:49-05:00","3fa1fedfffd522ae324a39846b11eef4dd7b05ba","refs/pull/221/merge","Renamed straggelers"
+"2022-11-07T13:28:53-08:00","535722ee0558599578a0e7671df0732fac7f16d7","refs/pull/226/merge","Make sure to use the correct SHA in the bench script."
