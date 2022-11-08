@@ -29,3 +29,4 @@ date,revision,branch,commit_msg
 "2022-11-07T13:28:53-08:00","535722ee0558599578a0e7671df0732fac7f16d7","refs/pull/226/merge","Make sure to use the correct SHA in the bench script."
 "2022-11-07T20:37:00-08:00","c0da82aad3aa66e509d1060a9b04c02499d0cd0f","refs/pull/226/merge","Fix incorrect determination logic for page-rank."
 "2022-11-08T11:27:00-08:00","8d2280223cf3357784e219568e1720d853533dc9","refs/heads/workflow-update","Update contribution guidelines."
+"2022-11-08T13:00:47-08:00","4aba8de5412028eb5fff53369669a73740e21ac5","refs/heads/workflow-update","Detect PR_COMMIT_SHA being empty properly in bash."
