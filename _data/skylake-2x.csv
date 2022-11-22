@@ -53,3 +53,4 @@ date,revision,branch,commit_msg
 "2022-11-21T14:52:32-08:00","23b598d86ccab195a5557aea224456eeb93a4faf","refs/heads/output_transport","The output half of the I/O pipeline."
 "2022-11-21T15:10:38-08:00","8759edaa29febd20bd7849fcdec94b0a2de7178d","refs/heads/stable_rust","Go back to stable Rust."
 "2022-11-21T16:59:28-08:00","10bbfea67e45fc8123781fed1d7798f5bc1fabba","refs/heads/stable_rust","Go back to stable Rust."
+"2022-11-21T19:35:12-08:00","049482f88af3f38795634774eb5b9af387d00b21","refs/heads/output_transport","Disable leak sanitizer."
