@@ -58,3 +58,4 @@ date,revision,branch,commit_msg
 "2022-11-22T15:59:01-08:00","883470986a055c07987cd2199b314181ebfcefc4","refs/heads/output_transport","Disable leak sanitizer."
 "2022-11-28T00:08:03-08:00","a4dbaa27e60f6ee1f79628b11d0e064fb4dd6b03","refs/heads/kafka","clippy"
 "2022-11-28T09:19:00-08:00","027e990c1b7abafbedb8283887967ee3ab65b5e5","refs/heads/kafka","Kafka input adapter."
+"2022-11-28T14:06:27-08:00","222634b6aff6d53b2e2062f7a48ead4057ad5802","refs/heads/kafka","Install RedPanda in CI."
