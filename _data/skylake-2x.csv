@@ -64,3 +64,4 @@ date,revision,branch,commit_msg
 "2022-11-28T21:31:03-08:00","74f8aa6d4f39f62739ad6f6cbbb3035f491e7d96","refs/heads/kafka","override"
 "2022-11-28T22:49:18-08:00","123831f561c173ebf6ec5c3639afaa76d4917b7d","refs/heads/kafka","skip kafka tests on windows and macos"
 "2022-11-28T23:33:18-08:00","ba29262397ab83a49d4730bb3b5c41e502cc33dd","refs/heads/kafka","Revert ""hack"""
+"2022-11-28T23:49:57-08:00","f2cd438f4ce8d1186308c733b043b2271c36c959","refs/heads/kafka","install redpanda in the coverage workflow"
