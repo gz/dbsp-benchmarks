@@ -68,3 +68,4 @@ date,revision,branch,commit_msg
 "2022-11-29T08:45:40-08:00","b40ee3c720187389a1775211371ea45bc6ca924d","refs/heads/simplified_rolling_aggregate","Simplified rolling aggregate operators."
 "2022-11-29T09:56:47-08:00","f7d955fbee66e9d8308b669d8ee70a138f04b9c7","refs/heads/simplified_rolling_aggregate","Simplified rolling aggregate operators."
 "2022-11-29T13:12:16-08:00","64063064a5498b1b4369a270abad26a31a3cdf7f","refs/heads/kafka","Install redpanda manually."
+"2022-11-29T13:25:20-08:00","2a65a393d69b8b407562ca5d06f73ef5b963d098","refs/heads/kafka","Install redpanda manually."
