@@ -62,3 +62,4 @@ date,revision,branch,commit_msg
 "2022-11-28T14:16:42-08:00","217a2802a7da78385705d08723b2da3a837c280f","refs/heads/kafka","Use fixed nightly Rust version in CI."
 "2022-11-28T14:58:56-08:00","df89cdfd3b53eee40f0b6d22f39507ea591a6d1b","refs/heads/kafka","Kafka input adapter."
 "2022-11-28T21:31:03-08:00","74f8aa6d4f39f62739ad6f6cbbb3035f491e7d96","refs/heads/kafka","override"
+"2022-11-28T22:49:18-08:00","123831f561c173ebf6ec5c3639afaa76d4917b7d","refs/heads/kafka","skip kafka tests on windows and macos"
