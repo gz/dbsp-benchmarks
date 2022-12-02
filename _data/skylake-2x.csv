@@ -70,3 +70,4 @@ date,revision,branch,commit_msg
 "2022-11-29T13:12:16-08:00","64063064a5498b1b4369a270abad26a31a3cdf7f","refs/heads/kafka","Install redpanda manually."
 "2022-11-29T13:25:20-08:00","2a65a393d69b8b407562ca5d06f73ef5b963d098","refs/heads/kafka","Install redpanda manually."
 "2022-11-30T11:12:36-08:00","e8c66c49c88705916200dbefa7d631bd63c54236","refs/heads/cmake-doc","Merge branch 'main' into cmake-doc"
+"2022-12-01T22:33:26-08:00","bc98ffa4c6513bd3afb25839e5bf416811df6881","refs/heads/kafka-output","Kafka output transport."
