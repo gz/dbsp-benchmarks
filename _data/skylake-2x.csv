@@ -79,3 +79,4 @@ date,revision,branch,commit_msg
 "2022-12-07T16:07:42-08:00","1d12bf8174b95da0d07e1576b0fa2a0fe1ae1d91","refs/heads/server","Minimal DBSP server."
 "2022-12-08T00:21:38-08:00","16ccaab10f4d847a9fa586c8ecbf93d37cc2f52a","refs/heads/server","Disable kafka tests with mem sanitizer."
 "2022-12-09T23:23:02-08:00","857c60148cfb4bca3dc041740b6e273748f28647","refs/heads/server","Disable kafka tests with mem and thrd sanitizers."
+"2022-12-12T13:04:59-08:00","b22d84293b1da830b9c05b88575b4c8bf23f2f4b","refs/heads/server","Disable kafka tests with mem and thrd sanitizers."
