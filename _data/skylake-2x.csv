@@ -81,3 +81,4 @@ date,revision,branch,commit_msg
 "2022-12-09T23:23:02-08:00","857c60148cfb4bca3dc041740b6e273748f28647","refs/heads/server","Disable kafka tests with mem and thrd sanitizers."
 "2022-12-12T13:04:59-08:00","b22d84293b1da830b9c05b88575b4c8bf23f2f4b","refs/heads/server","Disable kafka tests with mem and thrd sanitizers."
 "2022-12-12T15:52:56-06:00","2498661832b0408ffa2733f68869814468ec859a","refs/pull/248/merge","Implemented specalized gather operator"
+"2022-12-12T14:38:38-08:00","a1670572ea66254c8718e5f5fc13597bdd8a454a","refs/heads/status","Improved error reporting, `status` command."
