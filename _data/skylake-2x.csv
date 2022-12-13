@@ -83,3 +83,4 @@ date,revision,branch,commit_msg
 "2022-12-12T15:52:56-06:00","2498661832b0408ffa2733f68869814468ec859a","refs/pull/248/merge","Implemented specalized gather operator"
 "2022-12-12T14:38:38-08:00","a1670572ea66254c8718e5f5fc13597bdd8a454a","refs/heads/status","Improved error reporting, `status` command."
 "2022-12-12T17:26:14-08:00","1f3ed52e1477fa7577222d50849ef5de07edc078","refs/pull/250/merge","Some modules need to be public"
+"2022-12-12T21:59:43-08:00","ab6cf72a5c548f2aed096d5560030cd07f7e9b33","refs/pull/251/merge","Aggregates should respect the weights of the input zsets"
