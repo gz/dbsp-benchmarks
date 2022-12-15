@@ -89,3 +89,4 @@ date,revision,branch,commit_msg
 "2022-12-13T15:21:46-06:00","e8d866c76723ada1dde14dbcb1729354596bc073","refs/pull/248/merge","Implemented single GatherData struct instead of seperate channels/allocations for each worker"
 "2022-12-13T15:22:53-06:00","5a8d3b16a04763bb50192504d8addf58a1c3e79c","refs/pull/248/merge","Implemented single GatherData struct instead of seperate channels/allocations for each worker"
 "2022-12-13T15:27:02-06:00","210d7bce980e7e412519ef8c19a7be51737c4924","refs/pull/248/merge","Implemented single GatherData struct instead of seperate channels/allocations for each worker"
+"2022-12-15T14:24:56-06:00","bdcf6cfa609786148c1adf8b0eceebdafe89d412","refs/pull/253/merge","Fixed clippy lints"
