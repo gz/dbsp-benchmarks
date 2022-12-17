@@ -92,3 +92,4 @@ date,revision,branch,commit_msg
 "2022-12-15T14:24:56-06:00","bdcf6cfa609786148c1adf8b0eceebdafe89d412","refs/pull/253/merge","Fixed clippy lints"
 "2022-12-15T15:44:28-08:00","c7376156b31e11fbff39e83d43f0d51cd86862ee","refs/heads/status","Export `ExchangeSender`, `ExchangeReceiver`."
 "2022-12-16T13:11:47-06:00","67793b09abe8623fe087c67755e66b26bdaa577a","refs/pull/253/merge","!fixup Rustfmt"
+"2022-12-16T13:14:51-06:00","6ebe5ec7e4b77036b8352a60312b7f4f60ff1b0e","refs/pull/253/merge","Implemented Exchange over spsc oneshot channels"
