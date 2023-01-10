@@ -98,3 +98,4 @@ date,revision,branch,commit_msg
 "2023-01-09T12:33:23-08:00","9bce9ee7024b24a7308cfe5b61022300234acb9f","refs/heads/pipeline_server","dependencies fixup"
 "2023-01-09T15:22:05-06:00","03854ed76edcdd94569025e65ee09357c04e9742","refs/pull/233/merge","Erased ZSet"
 "2023-01-09T15:23:48-06:00","61511acd050b3fad630b17bce77f88c981f8d514","refs/pull/233/merge","Erased ZSet"
+"2023-01-10T08:58:00-08:00","6c3f01e1d4c8517b9af3d22eba69da759033b4c2","refs/pull/261/merge","Add scripts to prepare and deploy demo pod to a kind cluster"
