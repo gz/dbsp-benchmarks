@@ -107,3 +107,4 @@ date,revision,branch,commit_msg
 "2023-01-10T16:30:05-08:00","092eb235ce1ba46a41b95cb9c473963ab715e579","refs/heads/pipeline_server","serve static contents from FS on demand"
 "2023-01-12T11:10:59-08:00","ec02b0e7c04a6baa9b53ab5baa44cc7601c59311","refs/heads/rolling_aggregate_bug","Bug fixes in the rolling aggregate operator."
 "2023-01-12T11:42:51-08:00","90e0296ce45fc69509b7946b72648441a3547d52","refs/pull/264/merge","Implement PairSemigroup"
+"2023-01-12T14:09:48-08:00","020fbc1823c38da8d23e4817f24a4e4d61180917","refs/heads/rolling_aggregate_bug","Bug fixes in the rolling aggregate operator."
