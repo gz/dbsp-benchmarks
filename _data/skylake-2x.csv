@@ -109,3 +109,4 @@ date,revision,branch,commit_msg
 "2023-01-12T11:42:51-08:00","90e0296ce45fc69509b7946b72648441a3547d52","refs/pull/264/merge","Implement PairSemigroup"
 "2023-01-12T14:09:48-08:00","020fbc1823c38da8d23e4817f24a4e4d61180917","refs/heads/rolling_aggregate_bug","Bug fixes in the rolling aggregate operator."
 "2023-01-12T14:13:22-08:00","018b80697afe16583f6c7fb33630863fbd325fb8","refs/heads/rolling_aggregate_bug","Bug fixes in the rolling aggregate operator."
+"2023-01-12T17:36:29-06:00","7138029d6501b5e6c2d543137023014fc2663143","refs/heads/dataflow-jit","Eq, lt, clone, clone_into_slice and some string stuff"
