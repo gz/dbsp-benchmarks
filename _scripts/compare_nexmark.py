@@ -40,6 +40,8 @@ def get_ref_current():
 
 MEASUREMENT_ERROR = 5  # percent
 SERIOUS_DEGRADATION = 25  # percent
+# How many revisions to check for a comparison in main until we give up
+MAX_MAIN_REVISION = 100
 
 
 def percentage_to_icon(tput):
@@ -61,8 +63,9 @@ def format_percentage(p):
 
 def compare_ldbc(args):
     git_rev_current = get_ref_current()
+    found = False
 
-    for i in range(0, 10):
+    for i in range(0, MAX_MAIN_REVISION):
         git_rev_main = get_main_ref(i)
 
         if git_rev_main in machine_results:
@@ -108,13 +111,21 @@ def compare_ldbc(args):
                     git_rev_main))
             print()
             print(df_compare.to_markdown(index=False))
+            found = True
             break
+    if not found:
+        print()
+        print("### LDBC")
+        print()
+        print("Did not find any benchmark results for main within last {} revisions.".format(
+            MAX_MAIN_REVISION))
 
 
 def compare_nexmark(args):
     git_rev_current = get_ref_current()
+    found = False
 
-    for i in range(0, 10):
+    for i in range(0, MAX_MAIN_REVISION):
         git_rev_main = get_main_ref(i)
 
         if git_rev_main in machine_results:
@@ -144,8 +155,8 @@ def compare_nexmark(args):
             df_compare['Tput change [%]'] = df_compare['Tput change [%]'].map(
                 format_percentage)
 
-            df_compare['Peak RSS diff'] = current_results['allocstats_after_peak_rss'] - \
-                main_results['allocstats_after_peak_rss']
+            df_compare['Peak RSS diff'] = current_results['allocstats_after_peak_rss'] -
+            main_results['allocstats_after_peak_rss']
             df_compare['Peak RSS diff'] = df_compare['Peak RSS diff'].map(
                 naturalsize)
 
@@ -162,13 +173,21 @@ def compare_nexmark(args):
                     git_rev_main))
             print()
             print(df_compare.to_markdown())
+            found = True
             break
+    if not found:
+        print()
+        print("### Nexmark")
+        print()
+        print("Did not find any benchmark results for main within last {} revisions.".format(
+            MAX_MAIN_REVISION))
 
 
 def compare_nexmark_persistence(args):
     git_rev_current = get_ref_current()
+    found = False
 
-    for i in range(0, 10):
+    for i in range(0, MAX_MAIN_REVISION):
         git_rev_main = get_main_ref(i)
 
         if git_rev_main in machine_results:
@@ -222,13 +241,21 @@ def compare_nexmark_persistence(args):
                     git_rev_main))
             print()
             print(df_compare.to_markdown())
+            found = True
             break
+    if not found:
+        print()
+        print("### Nexmark (with Persistence)")
+        print()
+        print("Did not find any benchmark results for main within last {} revisions.".format(
+            MAX_MAIN_REVISION))
 
 
 def compare_galen(args):
     git_rev_current = get_ref_current()
+    found = False
 
-    for i in range(0, 10):
+    for i in range(0, MAX_MAIN_REVISION):
         git_rev_main = get_main_ref(i)
 
         if git_rev_main in machine_results:
@@ -266,7 +293,14 @@ def compare_galen(args):
                     git_rev_main))
             print()
             print(df_compare.to_markdown())
+            found = True
             break
+    if not found:
+        print()
+        print("### Galen")
+        print()
+        print("Did not find any benchmark results for main within last {} revisions.".format(
+            MAX_MAIN_REVISION))
 
 
 if __name__ == '__main__':

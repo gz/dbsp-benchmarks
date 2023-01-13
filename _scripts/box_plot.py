@@ -10,7 +10,7 @@ from pandas import DataFrame
 
 small_rng = pd.read_csv('small_rng.csv')
 small_rng['category'] = 'SmallRng'
-thread_rng = pd.read_csv('small_rng.csv')
+thread_rng = pd.read_csv('thread_rng.csv')
 thread_rng['category'] = 'ThreadRng'
 
 
@@ -20,7 +20,7 @@ results['name'] = results['name'].str.replace('q', '').astype(int)
 
 summary = results.groupby(['category', 'name']).agg({'elapsed': ['mean', 'std', 'min', 'max']})
 summary = summary[summary['elapsed']['std'] > 2]
-print(summary.to_markdown())
+print(summary)
 
 #results = results[results['name'] == summary['name']]
 
