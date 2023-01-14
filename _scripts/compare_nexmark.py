@@ -155,8 +155,7 @@ def compare_nexmark(args):
             df_compare['Tput change [%]'] = df_compare['Tput change [%]'].map(
                 format_percentage)
 
-            df_compare['Peak RSS diff'] = current_results['allocstats_after_peak_rss'] -
-            main_results['allocstats_after_peak_rss']
+            df_compare['Peak RSS diff'] = current_results['allocstats_after_peak_rss'] - main_results['allocstats_after_peak_rss']
             df_compare['Peak RSS diff'] = df_compare['Peak RSS diff'].map(
                 naturalsize)
 
