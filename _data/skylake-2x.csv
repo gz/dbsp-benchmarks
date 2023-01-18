@@ -128,3 +128,4 @@ date,revision,branch,commit_msg
 "2023-01-17T15:33:10-08:00","22f5b160537dcece8deb7335b9bab42518f0d5c0","refs/pull/276/merge","Several UI fixes"
 "2023-01-17T16:47:21-08:00","45543c824b53ec01c153d75c7e9526053fb65d95","refs/heads/pipeline_server","demos wip"
 "2023-01-17T17:12:27-08:00","998682f291c6a97f0a03fa3eeb1d1692520bc365","refs/heads/pipeline_server","Fix bug when displaying error"
+"2023-01-18T15:33:27+01:00","5a567a91c82e9363cda4d90688a5471474ff2205","refs/pull/278/merge","Fix the aarch64 neon vectorized implementation of `trace::consolidation::fill_indices"
