@@ -137,3 +137,4 @@ date,revision,branch,commit_msg
 "2023-01-24T14:22:42-08:00","b060f878f624fc864cae401feae8a0cf80c93986","refs/pull/280/merge","build: rename container images to dbspmanager"
 "2023-01-25T11:00:02-08:00","a59a61985e500d52d89f05d5a26babb4f3edcc01","refs/heads/kind_deploy","docker.sh improvements"
 "2023-01-27T14:37:21+01:00","d10926afbe8d50319b151ebbe998a801aaa97d22","refs/heads/nexmark-gen-bench","Add a simple benchmark of the nexmark generator"
+"2023-01-27T14:39:16+01:00","ed8eec633779f73691f108809a895e2c380bd72b","refs/heads/nexmark-gen-bench","Add a simple benchmark of the nexmark generator"
