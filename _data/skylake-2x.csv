@@ -149,3 +149,4 @@ date,revision,branch,commit_msg
 "2023-02-02T16:29:47-08:00","2703d0cdf10aa5909b373cec3524725f958395ce","refs/pull/286/merge","Add 'orgchart' example similar to Differential Dataflow first example."
 "2023-02-03T00:06:41-08:00","1cff1b8aeffd7e8be211dc0c1a556c8d36d258b1","refs/heads/generalized_distinct","formatting"
 "2023-02-03T09:41:11-08:00","e7d811e0e17a261406b60e8623345aabba5ac0ce","refs/heads/kind_deploy","Split the demo script."
+"2023-02-03T10:26:36-08:00","7157a62aa560b1d6c5a9070c0e06176838f0819e","refs/pull/288/merge","Get architecture specific .deb packages for prometheus and grafana"
