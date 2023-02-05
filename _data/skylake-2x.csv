@@ -154,3 +154,4 @@ date,revision,branch,commit_msg
 "2023-02-03T13:06:20-08:00","df21ca110a59e46b5ff302df42973ce712710451","refs/pull/286/merge","Missing derive's in the `orgchart` example."
 "2023-02-03T13:48:27-08:00","3cb8ea5c3fb90aec6a8dfbfc6de289a3fa03ec05","refs/pull/286/merge","orgchart: Use OrdZSet instead of OrdIndexedZSet."
 "2023-02-03T22:35:09-08:00","63a484892baebe753c691fc14fdb9e8183bc9ef1","refs/heads/generalized_distinct","Generalized incremental `distinct` operator."
+"2023-02-05T10:12:30-08:00","121bae59d4aaca6f42e11ccd0a2735db25bfc7a6","refs/heads/openapi","Cleanup & document pipeline manager API."
