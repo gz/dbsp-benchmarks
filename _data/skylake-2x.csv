@@ -174,3 +174,4 @@ date,revision,branch,commit_msg
 "2023-02-08T15:01:23-08:00","77bb3ae2af4ae9e3d9fc4784d02b7d6c8f1956b5","refs/pull/297/merge","Add a hello world example"
 "2023-02-08T17:17:52-08:00","96181d5c9d6e60746b9c6d9e376121fdee9767b3","refs/pull/297/merge","Rename orgchart.rs example"
 "2023-02-08T22:47:19-08:00","4bf3fe370c26e95dc1007e6bd3323a5cc1c8fbaa","refs/heads/generalized_distinct","Generalized incremental `distinct` operator."
+"2023-02-09T08:22:13-08:00","dfd5e0ecbc9155e8936e7a897084e2f16ecae30c","refs/pull/297/merge","Undo changes to examples/ folder. Move hello-world example to demo/"
