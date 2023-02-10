@@ -181,3 +181,4 @@ date,revision,branch,commit_msg
 "2023-02-09T11:22:24-08:00","bacc86248d542132d55131c23d4e237715b1b167","refs/heads/indexed_zset_iterator","Use `IndexedZSet` iterator interface to simplify orgchart example."
 "2023-02-09T13:24:44-06:00","a26ae44adb2241a0ffab474c5c502f3448baa200","refs/heads/dataflow-jit","Documentation on expressions, expanded Constant and ColumnType, made types inherent to expressions and added some type inference to FunctionBuilder to facilitate that"
 "2023-02-09T13:30:53-06:00","d73ecc48734b8b8cfba34d580f4671259fdcdbde","refs/heads/dataflow-jit","Documentation on expressions, expanded Constant and ColumnType, made types inherent to expressions and added some type inference to FunctionBuilder to facilitate that"
+"2023-02-09T13:49:47-06:00","1f95c13c68f68df80ff026ed35c43595262c0a03","refs/heads/dataflow-jit","Distinct in dataflow-jit"
