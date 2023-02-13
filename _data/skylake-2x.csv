@@ -185,3 +185,4 @@ date,revision,branch,commit_msg
 "2023-02-09T17:00:37-08:00","b0a8fb7a2d28ffc07f08eced8e5332332c2d07c5","refs/heads/degrees","degrees: Use IndexedZSet iterator instead of rolling our own locally."
 "2023-02-09T17:17:50-08:00","60fdcbf1e5efb5cc6a187fa02b2cf3d4b6d5c251","refs/heads/degrees","degrees: Simplify use of aggregate_linear."
 "2023-02-09T23:47:40-08:00","2ec034aaf0b70ded25e040433e9c0d7c9e917336","refs/heads/degrees","degrees: Simplify use of aggregate_linear."
+"2023-02-13T14:08:51-06:00","2432f7a62a7689079ded60f848391f61cdf955cf","refs/heads/columnar-sort","Implement fast sorting for columnar data"
