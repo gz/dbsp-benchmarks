@@ -194,3 +194,4 @@ date,revision,branch,commit_msg
 "2023-02-13T16:11:07-06:00","9a11b9d26c75dfbd7c4351804a71d45960a1fe38","refs/heads/dataflow-jit","Added safety comments"
 "2023-02-13T16:16:03-06:00","ef92545b4d9d3a6f06ee7f7819dc3f4df672a16f","refs/heads/columnar-sort","Typo bugfix"
 "2023-02-14T11:27:19-06:00","5b067e1f082de3f2740a073c0eedb7eb154d97a8","refs/heads/dataflow-jit","Dummy Encode/Decode impl for Row"
+"2023-02-14T12:50:21-06:00","753f905fa8c2037ba2b2498f4c5a88b84c982100","refs/heads/dataflow-jit","Fixed logger panics and ignored in-progress test"
