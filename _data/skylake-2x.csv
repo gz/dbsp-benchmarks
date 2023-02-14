@@ -191,3 +191,4 @@ date,revision,branch,commit_msg
 "2023-02-13T15:18:46-06:00","f66254cc16265ab88fdfce36514a5e6a2ab14363","refs/heads/columnar-sort","Clippy lints"
 "2023-02-13T15:39:03-06:00","e0a874d90390845cc2740eb4370edd0a0ad3f613","refs/heads/dataflow-jit","Merge branch 'dataflow-jit' of github.com:vmware/database-stream-processor into dataflow-jit"
 "2023-02-13T13:58:38-08:00","68cd2a7351cdc2aac14abb615a000dd9bcbb6258","refs/heads/dataflow-jit","Fix up `chrono` dependency."
+"2023-02-13T16:11:07-06:00","9a11b9d26c75dfbd7c4351804a71d45960a1fe38","refs/heads/dataflow-jit","Added safety comments"
