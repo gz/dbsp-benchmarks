@@ -203,3 +203,4 @@ date,revision,branch,commit_msg
 "2023-02-16T23:23:41-08:00","304849109059a69a96d7ec8b20d48c287b82192b","refs/heads/python_bindings","Python bindings to the DBSP REST API."
 "2023-02-17T16:43:09-08:00","4f8e127d4b484265416826fec358cb5c8f568672","refs/heads/python_bindings","Python bindings to the DBSP REST API."
 "2023-02-17T21:12:43-08:00","b394c88b6dc197142d228e6cf8deb642d61bfdb5","refs/heads/manager-defaults","Make sure manager can run without a config.yaml."
+"2023-02-18T00:26:20-08:00","b9ab2984c7e69b4c57a6208a2d95cd7539afcf3c","refs/heads/manager-defaults","Parse manager config from file or CLI."
