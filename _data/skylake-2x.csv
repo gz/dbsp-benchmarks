@@ -206,3 +206,4 @@ date,revision,branch,commit_msg
 "2023-02-18T00:26:20-08:00","b9ab2984c7e69b4c57a6208a2d95cd7539afcf3c","refs/heads/manager-defaults","Parse manager config from file or CLI."
 "2023-02-18T07:47:30-08:00","e4049cbacf9b9d554109ea6cb232f0ca29077ec2","refs/heads/manager-defaults","Fill in missing BAD_REQUEST responses."
 "2023-02-18T07:59:06-08:00","d77a8dc775153075e3c6d2f196d0bbe4ac2ffd7e","refs/heads/manager-defaults","Update .gitignore."
+"2023-02-18T23:09:18-07:00","3e39cb165c098a5f91112092a52bab4aad7c437c","refs/heads/manager-defaults","Dumping OpenAPI doesn't start server."
