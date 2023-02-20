@@ -208,3 +208,4 @@ date,revision,branch,commit_msg
 "2023-02-18T07:59:06-08:00","d77a8dc775153075e3c6d2f196d0bbe4ac2ffd7e","refs/heads/manager-defaults","Update .gitignore."
 "2023-02-18T23:09:18-07:00","3e39cb165c098a5f91112092a52bab4aad7c437c","refs/heads/manager-defaults","Dumping OpenAPI doesn't start server."
 "2023-02-19T12:43:49-08:00","422fe57359d7c1ce2b34a9e11c9d1a553b1bce72","refs/heads/jupyter","Fraud detection Python notebook."
+"2023-02-19T21:12:09-07:00","57b65f1292e1cf2e50f2a58628d9ec37cad759d6","refs/heads/cors","Two more flags to pipeline manager:"
