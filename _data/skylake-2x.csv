@@ -214,3 +214,4 @@ date,revision,branch,commit_msg
 "2023-02-20T14:27:06-08:00","0ee7d485069b7b44e16665a822501ea419757810","refs/pull/307/merge","Add a workflow to build and push docker containers to a registry"
 "2023-02-20T16:15:30-08:00","343b959e037a6617f18c8441daba81781f8024df","refs/heads/cors","Two more flags to pipeline manager:"
 "2023-02-20T19:18:07-08:00","0afd8f31fdac6857ba426035f89fcf8d5cef62ea","refs/heads/main","Two more flags to pipeline manager:"
+"2023-02-20T22:38:14-08:00","838eded080f36cececa9f028fcfcd188b1a53528","refs/heads/crates","Move Rust crates to a directory."
