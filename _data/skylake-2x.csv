@@ -217,3 +217,4 @@ date,revision,branch,commit_msg
 "2023-02-20T22:38:14-08:00","838eded080f36cececa9f028fcfcd188b1a53528","refs/heads/crates","Move Rust crates to a directory."
 "2023-02-21T00:17:05-07:00","a26dcffe982b2e14cad0150feff044583ddbab71","refs/heads/manager/desc","Add description field for project."
 "2023-02-21T12:34:54-08:00","ec036b54be1fbd328f35a8b43c211ca77b2508cc","refs/heads/main","Add a workflow to build and push docker containers to a registry"
+"2023-02-21T21:22:46-07:00","687ff7b73540ffb4e393254e3e259f1e75e95e3f","refs/heads/manager/desc","Fix order for new project DB insertion."
