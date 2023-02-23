@@ -226,3 +226,4 @@ date,revision,branch,commit_msg
 "2023-02-22T15:07:23-08:00","3254701521bb1e6603643d376e1fd065e4068be1","refs/pull/308/merge","Add description field for project."
 "2023-02-22T21:58:30-08:00","ac82ccbbe2ff590e0fa15f7bc82cc77c022805cd","refs/heads/main","Fix regression introduced in PR#305."
 "2023-02-23T00:24:27-08:00","02c2f131d5106b4903553147540243bb59ab2149","refs/pull/309/merge","Fixup Dockerfile and hello-world example."
+"2023-02-23T07:45:08-07:00","037d5f0020e26c6fef9f2a7384707b6ea0af2b48","refs/heads/manager/unique_name","Make the project_name field unique."
