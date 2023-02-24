@@ -244,3 +244,4 @@ date,revision,branch,commit_msg
 "2023-02-23T12:29:36-08:00","ef3b63ef04f185a10ddd0b2eb03d39dca5fb0ddb","refs/heads/crates","Further scale down CI."
 "2023-02-23T12:30:46-08:00","5f4f7018e251bcc778015734bc6362139eafea73","refs/heads/docker-test","Test run"
 "2023-02-23T12:38:10-08:00","b51226bee4c9dcb212ce145a7bb0af48d0331d6a","refs/heads/docker-test","Test run"
+"2023-02-23T16:26:24-08:00","03e9601c106246a27f156052efb952a5b614f38f","refs/heads/docker-test","Merge integration and containers workflows, and only conditionally run release steps"
