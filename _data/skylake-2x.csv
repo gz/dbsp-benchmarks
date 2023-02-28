@@ -254,3 +254,4 @@ date,revision,branch,commit_msg
 "2023-02-26T11:35:36-08:00","dfb3a702ee94421cd81b0b183314da3c11641b31","refs/heads/run_to_completion","Return project descriptor of `GET project/{id}`."
 "2023-02-26T18:32:31-08:00","2ccb10cdd60328a9cbdc1388244947fc14bfb2fc","refs/heads/fix-update-bug","Fix bug for project update"
 "2023-02-27T12:54:22-08:00","dcb87060d2429de4db0eb10e749df671be477747","refs/heads/run_to_completion","Return project descriptor of `GET project/{id}`."
+"2023-02-27T17:04:09-08:00","da9efe093e4755b8de7b9d27255ab758e41a9ae6","refs/heads/add-metadata","Return entire project meta-data when fetching code."
