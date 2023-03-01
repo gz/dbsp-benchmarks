@@ -257,3 +257,4 @@ date,revision,branch,commit_msg
 "2023-02-27T17:04:09-08:00","da9efe093e4755b8de7b9d27255ab758e41a9ae6","refs/heads/add-metadata","Return entire project meta-data when fetching code."
 "2023-02-27T21:00:59-08:00","b917c1cd0e294805766cc0ccb0a9ad7a4af95152","refs/heads/add-metadata","Return entire project meta-data when fetching code."
 "2023-02-28T11:15:44-06:00","a7299e2a8750d5d91d50304be8c6fd61c177bb76","refs/heads/dataflow-jit","Code cleanup and added TODO.md"
+"2023-02-28T17:05:44-08:00","2a19411f30a719c95084c986e5f362585e17fd2e","refs/heads/add-metadata","Switch manager to stronly typed SQL errors."
