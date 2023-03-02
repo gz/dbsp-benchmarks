@@ -266,3 +266,4 @@ date,revision,branch,commit_msg
 "2023-03-01T23:29:31-08:00","05f355e097f4ec9f51980ab68896b0e3fa594583","refs/heads/http_endpoint","Upgrade to hashbrown 0.13."
 "2023-03-02T12:08:45-06:00","54d5e9b0e255d69d61141fbd97e093473c458bb8","refs/heads/dataflow-jit","Added Constant dataflow node"
 "2023-03-02T12:24:37-06:00","905c5fb373cd56dbc90e5f3af6f58b8f6a74685b","refs/heads/dataflow-jit","Removed input from constant"
+"2023-03-02T10:37:07-08:00","0dd715c630a0adcfed3cdf32a28d53498d9accdf","refs/heads/compiler-task-bug","Fix error thrown in compiler task that wasn't handled."
