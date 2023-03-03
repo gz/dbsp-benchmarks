@@ -268,3 +268,4 @@ date,revision,branch,commit_msg
 "2023-03-02T12:24:37-06:00","905c5fb373cd56dbc90e5f3af6f58b8f6a74685b","refs/heads/dataflow-jit","Removed input from constant"
 "2023-03-02T10:37:07-08:00","0dd715c630a0adcfed3cdf32a28d53498d9accdf","refs/heads/compiler-task-bug","Fix error thrown in compiler task that wasn't handled."
 "2023-03-02T14:25:04-06:00","920e1b518c6a47709fdc1272f873444c99fc1a33","refs/heads/dataflow-jit","Added Select expression"
+"2023-03-02T18:56:13-08:00","defec04774667e010d625ccb7ef98dd09dd9fdfc","refs/heads/dockerignore","Simplify docker container"
