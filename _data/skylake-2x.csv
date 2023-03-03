@@ -273,3 +273,4 @@ date,revision,branch,commit_msg
 "2023-03-03T10:23:28-08:00","8538b87b11b745eea9bc8ce77350786d8384f844","refs/heads/dockerignore","Fix incorrect port assignments"
 "2023-03-03T10:43:49-08:00","7194879653329954d743213c7a7ff58e458faa15","refs/heads/dockerignore","Use a grace period of 0s for shutting down DBSP container"
 "2023-03-03T10:46:39-08:00","1b0869cc243630c5cde97034a5e0f102e4ad325d","refs/heads/build_automation","wip"
+"2023-03-03T11:12:15-08:00","84b970d96321be7f22d9bd1643059356cdcd50dd","refs/heads/sql_compiler_submodule","Make SQL compiler a git submodule."
