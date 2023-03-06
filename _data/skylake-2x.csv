@@ -286,3 +286,4 @@ date,revision,branch,commit_msg
 "2023-03-05T11:10:26-08:00","d8b98f40f778c1dc678ed6d6a10da417c8691070","refs/heads/main","Add separate state for rust compilation."
 "2023-03-05T11:11:03-08:00","ea6f64a51d26eaabf977350c9b9c915aa4558d15","refs/heads/dockerignore","Merge branch 'main' into dockerignore"
 "2023-03-05T13:01:49-08:00","9494a2dd5c45ce334926e106d9d9782fcd47dd0a","refs/heads/jupyter-lab","Improved fraud detection notebook."
+"2023-03-05T15:17:57-08:00","0f31181fcefad0873b5dedad4005771fe1dada0d","refs/heads/sql_compiler_submodule","Make SQL compiler a git submodule."
