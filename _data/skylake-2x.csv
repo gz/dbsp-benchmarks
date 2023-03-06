@@ -289,3 +289,4 @@ date,revision,branch,commit_msg
 "2023-03-05T15:17:57-08:00","0f31181fcefad0873b5dedad4005771fe1dada0d","refs/heads/sql_compiler_submodule","Make SQL compiler a git submodule."
 "2023-03-05T23:51:05-08:00","61dd47191e9eacabf20950efaf0d924951a3efc9","refs/heads/sql_compiler_submodule","Make SQL compiler a git submodule."
 "2023-03-06T07:25:19-08:00","0d6c71113f2702901730b038647420b4e785a0fd","refs/heads/dockerignore","Use dockerized Redpanda for local demos."
+"2023-03-06T12:05:43-06:00","a339fe35c637698008777dcba9926579d296decf","refs/heads/dataflow-jit","Moved literals to a module, made Fold use literals"
