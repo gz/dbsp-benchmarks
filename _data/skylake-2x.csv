@@ -293,3 +293,4 @@ date,revision,branch,commit_msg
 "2023-03-06T12:08:25-08:00","74c11766000ef7fae0a0fadb4d96fe76b149194b","refs/heads/dockerignore","Update prepare.sh's to use paste instead of mapfile to produce redpanda inputs"
 "2023-03-07T02:20:56-08:00","6033e598d2f0ec9a059e382b7c3de3737b28609a","refs/heads/schema-in-projectdesc","Add a schema parameter to the ProjectDesc."
 "2023-03-07T10:28:49-06:00","28ea6f42a612830cfbeb0cd325766244a138d356","refs/heads/dataflow-jit","Added some todos, starting on load deduplication"
+"2023-03-07T10:03:06-08:00","4ba3579ce0a7fc36f71c584beab5c027a601cc3f","refs/heads/postfix","#321 postfix: read in batches of inputs at a time"
