@@ -298,3 +298,4 @@ date,revision,branch,commit_msg
 "2023-03-07T21:45:29-08:00","27a44d1b6e0c3fc0b8e850baaba64d7dc9217058","refs/heads/schema-in-projectdesc","Fix issues with code."
 "2023-03-07T21:57:12-08:00","d3094c99a9bbc8522be4bef78cbe92285be860ee","refs/heads/schema-in-projectdesc","Update docs for schema field."
 "2023-03-07T22:37:07-08:00","d7a68ab5d3f2e5191470986d3b5c39965f6289f8","refs/heads/sql_compiler_submodule","Make SQL compiler a git submodule."
+"2023-03-07T22:54:05-08:00","d62309ccc3e2d4903d8fbeb5d94693204e8c6f46","refs/heads/schema-in-projectdesc","Fix clippy warning."
