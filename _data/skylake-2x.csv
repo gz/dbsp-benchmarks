@@ -302,3 +302,4 @@ date,revision,branch,commit_msg
 "2023-03-08T08:20:35-08:00","1b28fbc3fc2b98a627af979541e0623b8bb23ced","refs/heads/main","Fix clippy warning."
 "2023-03-08T09:55:37-08:00","77774455cae66c68875c25f6b36ee032c9da2ccf","refs/heads/main","Make SQL compiler a git submodule."
 "2023-03-08T13:03:50-06:00","92c5f6645808ec0e921954a2f73277cd7ca20a56","refs/heads/dataflow-jit","Started on FlatMap"
+"2023-03-08T16:52:54-08:00","aa5e28c3c5f53deba7b9ec05ffcd6c4bf28ec3c9","refs/heads/docker-share","Update README instructions for running Docker-based set up"
