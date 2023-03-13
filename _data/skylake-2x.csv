@@ -307,3 +307,4 @@ date,revision,branch,commit_msg
 "2023-03-09T12:58:51-08:00","c6d6fe9fcf1ff11604ce0cda5f78b3dfc024208a","refs/heads/docker-share","Update README instructions for running Docker-based set up"
 "2023-03-13T00:25:04-07:00","fab5c6c1a158a1d54a2b3386ccf4e9c75ae0a2f7","refs/heads/circuit_clock","benchmark fixup"
 "2023-03-13T08:53:20-07:00","f45a0f00d5ef12d06deae8a07684dbe50baf4523","refs/heads/circuit_clock","workflow fixup"
+"2023-03-13T13:28:09-07:00","f1de48f412a170dec6cddf2b4fcb42509e8a2b32","refs/heads/circuit_clock","Move timekeeping to the circuit."
