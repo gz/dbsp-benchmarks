@@ -315,3 +315,4 @@ date,revision,branch,commit_msg
 "2023-03-15T13:18:54-07:00","c944bf7de8bd9d2cbee72685a30ca41c3783726b","refs/heads/demo-preload","Modify docker_demo.sh to also call prepare_demo_projects.sh"
 "2023-03-15T18:09:22-07:00","7211f452cc0b6e7d6a40a3126df602a788ab0f52","refs/pull/336/merge","Camera-ready version"
 "2023-03-15T18:45:47-07:00","3ae9ba0eef870766051ea86c3f249f6d72779df9","refs/pull/336/merge","Correct link to TR"
+"2023-03-15T23:43:04-05:00","de309495627f158765980c62336104fd907c82bc","refs/heads/dataflow-jit","FlatMap operator, function calls and `@dbsp.row.vec.push()`"
