@@ -319,3 +319,4 @@ date,revision,branch,commit_msg
 "2023-03-13T21:11:08-07:00","91447e0584868aa1f5fd19d034e605b4928d5663","refs/heads/connectors","Update source."
 "2023-03-16T11:52:39-05:00","7403c5b12ed3a21b97d660af59f370e02fe23ed5","refs/heads/dataflow-jit","Custom FlatMap operator for JIT"
 "2023-03-16T15:56:11-05:00","d0fda30bd58330bd5d05631ca0656e43faf332e2","refs/heads/quicksort-fix","Fixed quicksort bug"
+"2023-03-16T17:02:55-07:00","35a2fd8c6b98f580ac39cc38d9aea4ad6c7801ec","refs/heads/connectors-refactor","Begin refactoring DB accesses to use sqlx::Any"
