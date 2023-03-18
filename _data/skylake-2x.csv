@@ -326,3 +326,4 @@ date,revision,branch,commit_msg
 "2023-03-17T11:33:46-07:00","b508e5ad9661b1dbd01953781c2c9dd4899cdcb6","refs/heads/gc","Proptests for `trace::layers`."
 "2023-03-17T13:15:25-07:00","6f4ec652cb9699f1b6886085f661bab16033d8b6","refs/heads/gc","Fix for semver violation in the `time` crate."
 "2023-03-17T14:12:26-07:00","6f233e9a106d7f78604215d9f4fb07f6ca3d792d","refs/heads/connectors-refactor","Migrate new_project() and list_project()"
+"2023-03-18T09:24:40-07:00","0705657fd7a925826d1d5b2681157087e13001b8","refs/heads/main","Modify docker_demo.sh to also call prepare_demo_projects.sh"
