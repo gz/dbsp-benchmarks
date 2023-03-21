@@ -335,3 +335,4 @@ date,revision,branch,commit_msg
 "2023-03-20T08:43:52-07:00","14b69fad18b77ba2d2dd2f8c9c8cfa2f0eabe6c5","refs/heads/gc","Regression in utoipa."
 "2023-03-20T16:01:23-07:00","1c34d6193e46d6f83c1a2ece2bfb4127d25728ee","refs/heads/gc","Regression in utoipa."
 "2023-03-20T22:38:16-07:00","0478ba76825f6f3d0b3f42770c52c6228f335c76","refs/heads/gc","Regression in utoipa."
+"2023-03-21T10:58:24-07:00","558b462654999ed577ddbe9aef1a29b625c614f2","refs/heads/sqlx","Migrate reset_project() and also use workarounds to deal with sqlx#2416"
