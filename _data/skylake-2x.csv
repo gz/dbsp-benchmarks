@@ -348,3 +348,4 @@ date,revision,branch,commit_msg
 "2023-03-23T13:14:09-07:00","1e1db7a0cdfd8b8cff99dfcca8a3a1f63f186387","refs/heads/sqlx","Test for SQL connection and close it before daemonize.start()"
 "2023-03-23T15:52:50-07:00","8bd5fa136cdcd94b5acc8ce89e0262cd0e8d3c20","refs/heads/sqlx","Change ManagerConfig to hold a DB connection string rather than filename"
 "2023-03-23T15:55:05-07:00","0aa68470e086fe2c4546d51f40f8bcd5b82039c9","refs/heads/sqlx","Only build test_setup() method when running tests"
+"2023-03-23T16:24:12-07:00","8769815e4893049e9e79b07d37da2543dd9e3a1f","refs/heads/sqlx","Clarify killed field being an integer"
