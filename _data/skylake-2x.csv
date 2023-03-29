@@ -367,3 +367,4 @@ date,revision,branch,commit_msg
 "2023-03-28T13:51:55-05:00","6cad759960b40c90bced6fc7712cba111687d4e8","refs/heads/dataflow-jit","Graph visitor infrastrure and fixed rebase error in pipeline_manager"
 "2023-03-28T12:24:08-07:00","832ce0c4b23351bffd1fe0c05c9c8ebd8d50038d","refs/heads/main","Add instructions and infrastructure for running Nexmark benchmark on Flink."
 "2023-03-28T15:30:07-05:00","7619e63ca526642c65af86a5e0855fa81939d7c5","refs/heads/dataflow-jit","Fixed compile error with persistence"
+"2023-03-28T15:32:04-05:00","597d87ae62073df7ca6ee0808c8056c3413d19a3","refs/heads/dataflow-jit","Merge branch 'main' into dataflow-jit"
