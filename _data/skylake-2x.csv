@@ -373,3 +373,4 @@ date,revision,branch,commit_msg
 "2023-03-29T15:14:46-05:00","4dea7b731efd3e6eefdc9580a900cd3fa71b68df","refs/heads/dataflow-jit","Node deduplication & fixed tests"
 "2023-03-30T11:07:20-05:00","81bdfcb9879d93a09838c7688eea37206c0467c2","refs/heads/dataflow-jit","Fixed test bugs"
 "2023-03-30T10:02:33-07:00","39154470a191bc1a418406d98a1dfb6e5c4ef642","refs/heads/connectors","Added uuid for connectors."
+"2023-03-30T11:32:56-07:00","d9a1d53599770f46398a1c06465d13687dae90f2","refs/heads/flink-kafka","Add instructions running Nexmark benchmark on Flink with Kakfa."
