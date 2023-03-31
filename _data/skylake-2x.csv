@@ -377,3 +377,4 @@ date,revision,branch,commit_msg
 "2023-03-31T01:26:22-07:00","004cac570047ab9fb3fdaff7fa6aff4a707f04ca","refs/heads/connectors","Generating config."
 "2023-03-31T08:38:06-07:00","aca5c35983406ef348bdffe83efbf08b6dde2700","refs/heads/sql_compiler_bugs","Typo in comment."
 "2023-03-31T10:40:25-07:00","dc2ce399ec0494595fef95dba8909ed8653e1880","refs/heads/pg","Add Postgres support"
+"2023-03-31T11:17:38-07:00","4272b1e1265c5b07bdccac6057b9bea9302418a1","refs/heads/sql_compiler_bugs","Add lsan suppression file to `dataflow-jit`."
