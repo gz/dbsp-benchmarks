@@ -381,3 +381,4 @@ date,revision,branch,commit_msg
 "2023-03-31T14:25:43-05:00","d28ac33131108970ba2b79f98964b6f5baec432e","refs/pull/347/merge","Implemented date functions and intrinsics"
 "2023-03-31T13:01:57-07:00","a1109568dc251cfc8f5bfafbbfd4697b647368ea","refs/heads/pg","Address review comment"
 "2023-03-31T13:04:01-07:00","2ad1daa741156046ae7639fc9396e5f3ed8782b3","refs/heads/pg","Add Postgres support"
+"2023-03-31T16:08:22-07:00","9bf26fb2a80f7a1e3bace6cecf3fc1ddf4072f9d","refs/heads/connectors","Add direction to ConnectorDescr."
