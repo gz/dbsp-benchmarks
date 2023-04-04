@@ -395,3 +395,4 @@ date,revision,branch,commit_msg
 "2023-04-03T23:19:49-07:00","8222a8bf4b3946be7533605118b01234cc943ca5","refs/heads/connectors-rebased","Fix python API to work with new connector API."
 "2023-04-04T08:22:33-07:00","5538c1a048b52316f1fe27a395922d1085fb4017","refs/heads/sec","Fix dependabot complaints about openssl and spin versions"
 "2023-04-04T11:07:19-07:00","1fd02b73399a3e6b48e8916e23562d6d07501acd","refs/heads/sec","Trying vcpkg again"
+"2023-04-04T11:25:23-07:00","f8a89ac6c7fbd5ddcc852b7a54dcce8359867109","refs/heads/sec","Trying vcpkg again"
