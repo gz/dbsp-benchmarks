@@ -398,3 +398,4 @@ date,revision,branch,commit_msg
 "2023-04-04T11:25:23-07:00","f8a89ac6c7fbd5ddcc852b7a54dcce8359867109","refs/heads/sec","Trying vcpkg again"
 "2023-04-04T11:41:52-07:00","a0d944fbedf172fcdd06db9dd68a3bbf90c7a9c1","refs/heads/connectors-rebased","Fix table creation order."
 "2023-04-04T12:33:33-07:00","fece49835da48fcd64503e1251edd453a65941de","refs/heads/sec","Fix dependabot complaints about openssl and spin versions"
+"2023-04-04T15:02:23-05:00","f5c0e59abdba49425b4e7852a201dfb6a154419c","refs/pull/347/merge","Fixed memory leak in ThinStr"
