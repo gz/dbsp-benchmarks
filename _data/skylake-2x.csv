@@ -406,3 +406,4 @@ date,revision,branch,commit_msg
 "2023-04-05T18:01:26-07:00","e26b77ea6c9b2df938783b17611d481fb24734ed","refs/heads/connectors-rebased","Model 1:1 relationship between pipeline and config."
 "2023-04-06T09:03:24-07:00","a4b83f64fff35864187b76d7b1086bdc301d5a18","refs/heads/k8s-prepare","Provide manager URL as an argument to python test"
 "2023-04-06T09:10:35-07:00","7c8beb3edf701f2a7fb4f7a270e1c2e54535424a","refs/heads/k8s-prepare","Support HTTP connector creation from the python API"
+"2023-04-06T11:33:51-07:00","3ca30b3e1b633eefc035451098aabaa14003ce64","refs/heads/k8s-prepare","Add specs for bringing up DBSP pod and services in Kubneretes"
