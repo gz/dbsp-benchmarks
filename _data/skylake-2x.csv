@@ -402,3 +402,4 @@ date,revision,branch,commit_msg
 "2023-04-05T08:57:08-07:00","a4063a86c2f54232de74bb53432de39f489a35f2","refs/pull/344/merge","Merge branch 'main' into flink-kafka"
 "2023-04-05T13:44:40-05:00","b9f1691a8cf988d1748659a609ec3973248a6cca","refs/pull/347/merge","Fixed bug in dbsp.timestamp.year (rem_euclid => srem)"
 "2023-04-05T17:49:06-07:00","83696c409043434d3615a492b833820b9a0bf25c","refs/heads/connectors-rebased","Fix python API."
+"2023-04-05T17:58:51-07:00","e8546f25e3a16428af27d5817a4a31660be88fd9","refs/heads/connectors-rebased","Model 1:1 relationship between pipeline and config."
