@@ -418,3 +418,4 @@ date,revision,branch,commit_msg
 "2023-04-09T16:36:10-07:00","20a16fef34a1f716e667ef502f76fffcbf7fe6eb","refs/heads/webui","Rerouting / to home."
 "2023-04-09T16:38:38-07:00","2be4d8a3fd177fd75d7e5cff38823a9b5a62343d","refs/heads/webui","Remove apple-touch-icon."
 "2023-04-09T22:58:25-07:00","52e43f1c852b44cdf2bc9cd3c7572dc33661a489","refs/heads/webui","Simplify EntityTable Menu."
+"2023-04-09T23:06:27-07:00","c7b666f42558444393eacc42c90763084fcbbe8e","refs/heads/webui","Simplify EntityTable Menu."
