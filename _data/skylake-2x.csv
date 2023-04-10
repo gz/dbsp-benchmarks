@@ -415,3 +415,4 @@ date,revision,branch,commit_msg
 "2023-04-08T14:49:18-07:00","73eda3565c187351f85f7ca04933d96bbd153e06","refs/heads/main","Run cargo update"
 "2023-04-09T08:31:43-07:00","aa5fce613c599a9ecee6ee21e19522e292e797c1","refs/heads/dependency-review","Add dependency review action to audit workflow"
 "2023-04-09T09:19:40-07:00","4dd4f2509ec8846193e9b6964c5da17fba158165","refs/heads/dependency-review","Always compare against main"
+"2023-04-09T16:36:10-07:00","20a16fef34a1f716e667ef502f76fffcbf7fe6eb","refs/heads/webui","Rerouting / to home."
