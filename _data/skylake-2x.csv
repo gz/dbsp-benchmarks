@@ -428,3 +428,4 @@ date,revision,branch,commit_msg
 "2023-04-11T11:15:34-05:00","72e5cea528a2dd0e754c2a3e8ac4d1dd44ee3e62","refs/pull/347/merge","Skip dataflow-jit when running under MemorySanitizer"
 "2023-04-11T12:01:05-05:00","cf035347240a5b75478c439bdb3ea906fd1f2d4a","refs/pull/347/merge","Skip dataflow-jit when running under MemorySanitizer"
 "2023-04-11T13:23:48-07:00","139d086ced9a5977b686e0992a49fcfdf599217f","refs/heads/k8s-prepare","Allow test.py to work with http connectors and any manager URL"
+"2023-04-11T13:32:26-07:00","d6724953dc831166692d916890d0fb8ac4f35709","refs/pull/355/merge","Fix Cargo.lock"
