@@ -431,3 +431,4 @@ date,revision,branch,commit_msg
 "2023-04-11T13:32:26-07:00","d6724953dc831166692d916890d0fb8ac4f35709","refs/pull/355/merge","Fix Cargo.lock"
 "2023-04-11T16:01:00-07:00","d8691592bf03702ea1032d250d84ca2ba065492d","refs/heads/k8s-prepare","Fix Cargo.lock"
 "2023-04-11T18:59:55-07:00","2f9258d00b12da213d1d671f62a896e7535135e6","refs/heads/webui","Rename data->connectors."
+"2023-04-11T19:19:06-07:00","7040e8ee33afa31cb36a41d87630e975ef52a51f","refs/heads/webui","Rename tab folders, document connector table."
