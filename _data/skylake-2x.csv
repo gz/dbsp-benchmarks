@@ -452,3 +452,4 @@ date,revision,branch,commit_msg
 "2023-04-13T15:44:47-07:00","f463b489dbfc6189824f41aba6c167ebbf8ceeb5","refs/heads/q9-clean","`cargo update`."
 "2023-04-14T01:39:09-07:00","dea57664c073d1725249058bda7671717c78fea5","refs/heads/webui","Add generic connector config dialog."
 "2023-04-14T01:51:43-07:00","35e734008bcbd3c894ebf6873d349ddb422ac797","refs/heads/webui","Comments for the builder."
+"2023-04-14T02:26:11-07:00","000fca14e4b1ffc0e6647b3fcdea98876a146cec","refs/heads/webui","Dialog to complain about missing program schema."
