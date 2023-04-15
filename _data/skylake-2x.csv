@@ -460,3 +460,4 @@ date,revision,branch,commit_msg
 "2023-04-14T18:01:30-07:00","c97ca09bbe13a30eed99040a9323be1b5aa0932f","refs/heads/webui","Add onError handler in queries where its missing."
 "2023-04-14T18:43:11-07:00","c4a52684660ede7e2848036ea18671620a598e91","refs/heads/webui","Basic Error handling when SQL program tables/viewnames change."
 "2023-04-14T18:52:57-07:00","808faedb13a269fc568563e07cbc0c00fee2e843","refs/heads/webui","Basic Error handling when SQL program tables/viewnames change."
+"2023-04-14T19:19:29-07:00","05c03daee8b79659fc3733520b66c420c7cff66f","refs/heads/webui","Delete unused file."
