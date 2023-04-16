@@ -470,3 +470,4 @@ date,revision,branch,commit_msg
 "2023-04-15T19:41:24-07:00","a885424d4365d60639d7b69346e463ef8404764a","refs/heads/embedded-pg","Switch to tokio-postgres instead of sqlx."
 "2023-04-15T23:27:11-07:00","ec47e1d74fcd0fb112a02cb86728d8579edeee42","refs/heads/embedded-pg","Model for testing the database."
 "2023-04-15T23:28:26-07:00","a8da05008d854a9391c3e60b28b25681a9d8f8ae","refs/heads/embedded-pg","Model for testing the database."
+"2023-04-16T00:28:48-07:00","7c1ccdcc697044f28ce309935771f589140345e7","refs/heads/truncate_trace","Bounded-memory partitioned rolling aggregate."
