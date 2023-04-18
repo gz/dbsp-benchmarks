@@ -478,3 +478,4 @@ date,revision,branch,commit_msg
 "2023-04-17T16:28:58-07:00","72c5eaabcde6f6bf194ff18012579979542a8627","refs/heads/k8s-test","Run python e2e test for Docker too"
 "2023-04-17T19:03:05-07:00","a902a09bc15c03f22b2db2ef87363e39c7ce7c75","refs/heads/k8s-test","Run python e2e test for Docker too"
 "2023-04-17T20:29:40-07:00","953b9e1404c1cc410aafe9116bdc9eca5adfd4f5","refs/heads/k8s-test","Print message before assertion in test.py"
+"2023-04-17T21:44:35-07:00","ba8a38e76ccb554563cd026de2b454954e8a3e65","refs/heads/k8s-test","Use kind directly"
