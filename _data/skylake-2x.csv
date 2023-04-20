@@ -490,3 +490,4 @@ date,revision,branch,commit_msg
 "2023-04-19T11:52:16-07:00","8cc2620bbc9d27368d57e561a1406934a5777686","refs/heads/embedded-pg","Fix comments."
 "2023-04-19T14:34:47-07:00","735f20703c11b8daa71dfd36b24962350e089b2d","refs/heads/nexmark","benchmark: Automate running the benchmark across multiple runners."
 "2023-04-19T17:14:11-07:00","48d0d5a97d1df379d7704b364aad0f1629c92d6c","refs/heads/embedded-pg","Set PGCLIENTENCODING to UTF8."
+"2023-04-20T01:08:59-07:00","103af05d31bfddcdc634e9d5146dc79732d5347c","refs/heads/embedded-pg","Fix bug in db model."
