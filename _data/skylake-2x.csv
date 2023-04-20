@@ -492,3 +492,4 @@ date,revision,branch,commit_msg
 "2023-04-19T17:14:11-07:00","48d0d5a97d1df379d7704b364aad0f1629c92d6c","refs/heads/embedded-pg","Set PGCLIENTENCODING to UTF8."
 "2023-04-20T01:08:59-07:00","103af05d31bfddcdc634e9d5146dc79732d5347c","refs/heads/embedded-pg","Fix bug in db model."
 "2023-04-20T01:29:59-07:00","877c6886c485ae57a65293c6f1d312173e612e38","refs/heads/embedded-pg","Update pg-embed."
+"2023-04-20T09:40:52-07:00","9d78f9b8bb677663129d827d7028d5577d897437","refs/heads/truncate_trace","Bounded-memory partitioned rolling aggregate."
