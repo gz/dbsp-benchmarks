@@ -488,3 +488,4 @@ date,revision,branch,commit_msg
 "2023-04-18T22:41:48-07:00","2dda79d7d5b723435730666a1ed5e2b4c857e661","refs/heads/embedded-pg","Debug Ci."
 "2023-04-19T00:41:20-07:00","e018c57e0e92038966ae114a426fa22d0577bc1f","refs/heads/embedded-pg","Debug CI"
 "2023-04-19T11:52:16-07:00","8cc2620bbc9d27368d57e561a1406934a5777686","refs/heads/embedded-pg","Fix comments."
+"2023-04-19T14:34:47-07:00","735f20703c11b8daa71dfd36b24962350e089b2d","refs/heads/nexmark","benchmark: Automate running the benchmark across multiple runners."
