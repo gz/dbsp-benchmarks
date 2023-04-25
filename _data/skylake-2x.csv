@@ -500,3 +500,4 @@ date,revision,branch,commit_msg
 "2023-04-21T09:50:58-05:00","98cd9a723b2a75a7fada9a53e9a02aa261d3cf38","refs/heads/cleanups","Improved assert_sorted_eq a little more"
 "2023-04-21T11:35:45-05:00","fd01a456ea46f692a827bf82cf1f03d9230dce4c","refs/heads/cleanups","Update Cargo.lock"
 "2023-04-21T16:48:52-07:00","67b74297f15e5f021019f083c57af62371161945","refs/heads/k8s-postgres","Remove -it from test runner"
+"2023-04-24T18:49:02-07:00","96f287a524663b343d28c7a506392d3d4ac7de5e","refs/heads/webui","Fix pipeline editor."
