@@ -503,3 +503,4 @@ date,revision,branch,commit_msg
 "2023-04-24T18:49:02-07:00","96f287a524663b343d28c7a506392d3d4ac7de5e","refs/heads/webui","Fix pipeline editor."
 "2023-04-24T22:39:08-07:00","c5d62f8dd4a6be490d98311cb14364a9911751bb","refs/heads/webui","Refactor and document utility functions."
 "2023-04-24T23:09:22-07:00","1f600e62ad69da468f03a4316704d020ed89f60e","refs/heads/webui","More robust and commented defaultQueryFn."
+"2023-04-24T23:20:16-07:00","e319226893298358c2b89ba44bbbdaeedd3e406c","refs/heads/webui","Remove returns."
