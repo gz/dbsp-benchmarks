@@ -518,3 +518,4 @@ date,revision,branch,commit_msg
 "2023-04-28T14:54:25-07:00","3193b041e7465a1e77d2ee5c59a494beae9e87cc","refs/heads/k8s-postgres","Remove pg_setup::embedded module"
 "2023-04-28T14:54:56-07:00","d811bec23cf45b17cb71e3da052218f27869dd27","refs/heads/reversible_cursors","Reversible cursors."
 "2023-04-28T16:21:44-07:00","efdd9dc5eb69f1cf30f84c5222644a4d5794b18b","refs/heads/reversible_cursors","Reversible cursors."
+"2023-04-29T08:33:42-07:00","c82016c7337105cd0beadb40552f3c6339c02513","refs/heads/k8s-postgres","Enable dev feature during tests. It is no longer a default feature either."
