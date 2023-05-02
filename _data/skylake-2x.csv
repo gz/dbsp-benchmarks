@@ -534,3 +534,4 @@ date,revision,branch,commit_msg
 "2023-05-01T12:14:20-05:00","cc8975c4df9e67c780c9e19e793c1a166b72a4c9","refs/heads/patch-386","Fixed #386"
 "2023-05-01T10:26:37-07:00","da130200384006735cc8cdb2a6f0049d4039fc5a","refs/heads/reversible_cursors","Reversible cursors."
 "2023-05-01T13:43:47-05:00","fc589cf6206d0e43b49d49059163efb561503d03","refs/heads/patch-386","Fixed #386"
+"2023-05-01T13:47:29-07:00","a0470ec14652cc0dd5934be0d9a744aaf9eeba02","refs/heads/ui-regres","Re-create the constraint if we restart to ensure we can stop/start the manager."
