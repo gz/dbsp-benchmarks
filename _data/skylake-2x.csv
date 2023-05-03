@@ -536,3 +536,4 @@ date,revision,branch,commit_msg
 "2023-05-01T13:43:47-05:00","fc589cf6206d0e43b49d49059163efb561503d03","refs/heads/patch-386","Fixed #386"
 "2023-05-01T13:47:29-07:00","a0470ec14652cc0dd5934be0d9a744aaf9eeba02","refs/heads/ui-regres","Re-create the constraint if we restart to ensure we can stop/start the manager."
 "2023-05-01T13:53:39-07:00","1ba6712b337fce571703077a889b6ff7a98997d3","refs/heads/ui-regres","Re-create the constraint if we restart to ensure we can stop/start the manager."
+"2023-05-03T10:03:39-07:00","8f85608b75a5a3aafcc8f10c2bc084adc6ec4d43","refs/heads/vulnerability_alerts","Bump `daemonize` to 0.5.0."
