@@ -543,3 +543,4 @@ date,revision,branch,commit_msg
 "2023-05-04T12:09:52-05:00","c6a9ff234980c8f28929c2d2e23a26df5d849df5","refs/heads/string-niche","Fixed bugs from string migration"
 "2023-05-05T00:06:45-07:00","a35600652cc8987827d406cb48d24f9916f99a8f","refs/heads/selenium-test","Adds webui-tester crate."
 "2023-05-05T12:55:06-05:00","68fe606e4f23bee5fddf9f92f98fc3b76e5c6c01","refs/heads/string-functions","Added @dbsp.str.write"
+"2023-05-06T05:40:52+00:00","bf3048302d3eef422c3485162c8ea0bcfb6b819f","refs/heads/earthci","Initial Earthfile to evaluate earthly as a CI tool for us."
